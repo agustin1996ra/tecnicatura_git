@@ -3,3 +3,9 @@ del dia martes 26 de abril
 
 tambien el dia de hoy commiteamos las actividades laboratorio
 de programacion 
+
+esta es la segunda vez que escribo esto
+ya que me pidieron hacer un git checkout
+
+nuevas lineas
+-------------

@@ -1,3 +1,4 @@
+"""
 miVariable = 3
 print(miVariable)
 miVariable = "Hola a todos"
@@ -8,7 +9,7 @@ print(miVariable)
 
 print()
 print()
-
+"""
 """
 Tipos de variables:
     int = número entero
@@ -20,7 +21,7 @@ Cuando utilizamos la función "type()" obtenemos
 la información de que tipo de variable ingresamos
 dentro de los paréntesis de la función
 """
-
+"""
 x = 10
 print(x)
 print(type(x))
@@ -40,7 +41,7 @@ print(type(x))
 
 print()
 print()
-
+"""
 
 """
 Manejo de cadenas (String)
@@ -50,6 +51,7 @@ Manejo de cadenas (String)
     suma.
     
 -   Utilizando la coma
+"""
 """
 miGrupoFavorito = "Snarky Puppy"
 caracteristicas = "The best contemporary Jazz Band"
@@ -72,9 +74,10 @@ print(int(numero1) + int(numero2))
 
 print()
 print()
-
-"""  Tipos Booleanos    
 """
+""" 
+#Tipos Booleanos    
+
 miBooleano1 = True
 print(miBooleano1)
 miBooleano2 = 3 > 2
@@ -90,12 +93,66 @@ if miBooleano3:
     print("1 > 2 es verdadero")
 else:
     print("1 > 2 es falso")
-
+"""
 
 # Procesar la entrada del usuario
 # función input
+"""
 resultado = input("Digite un numero: ") # Nos regresa un dato tipo str
 print("el numero ingresado es: "+resultado)
-
+"""
 # Conversión de la entrada de datos
+"""
+numero1 = int(input("Escribe el primer numero: "))
+numero2 = int(input("Escribe el segundo numero: "))
+resultado = numero1 + numero2
+print("El resultado de la suma es: ", resultado)
+"""
+# Operadores
+"""
+operandoA = 8
+operandoB = 5
+suma = operandoA + operandoB
+#print("Resultado de la suma: ", suma)
+print(f"El resultado de la suma es: {suma}")
+
+resta = operandoA - operandoB
+print(f"El resultado de la resta es: {resta}")
+
+division = operandoA / operandoB
+
+division = operandoA // operandoB
+
+modulo = operandoA % opernadoB
+
+exponente = operandoA ** operandoB
+
+"""
+"""
+
+# Ejercicio rectángulo
+alto = int(input("Proporciona el alto del rectángulo: "))
+ancho = int(input("Proporciona el ancho del rectángulo: "))
+area = alto * ancho
+perimetro = (alto + ancho)*2
+print(f"El perimetro de el rectángulo es {perimetro} y el area es {area}")
+
+
+# operadores de comparacion
+"""
+
+# ejercicio par o impar
+
+num = int(input("ingrese un numero: "))
+if (num % 2) == 0:
+    print("el numero es par")
+else:
+    print("el numero es impar")
+
+comprobador = (num % 2) == 0
+
+if comprobador:
+    print("el numero es par")
+else:
+    print("el numero es impar")
 
