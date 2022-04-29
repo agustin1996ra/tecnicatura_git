@@ -1,3 +1,4 @@
+# Tipos de variables
 """
 miVariable = 3
 print(miVariable)
@@ -42,7 +43,7 @@ print(type(x))
 print()
 print()
 """
-
+# concatenación de strings
 """
 Manejo de cadenas (String)
     - Concatenación:
@@ -75,9 +76,8 @@ print(int(numero1) + int(numero2))
 print()
 print()
 """
+# Tipos Booleanos
 """ 
-#Tipos Booleanos    
-
 miBooleano1 = True
 print(miBooleano1)
 miBooleano2 = 3 > 2
@@ -119,6 +119,8 @@ print(f"El resultado de la suma es: {suma}")
 resta = operandoA - operandoB
 print(f"El resultado de la resta es: {resta}")
 
+multiplicacion = operandoA * operandoB
+
 division = operandoA / operandoB
 
 division = operandoA // operandoB
@@ -128,21 +130,74 @@ modulo = operandoA % opernadoB
 exponente = operandoA ** operandoB
 
 """
-"""
-
 # Ejercicio rectángulo
+"""
 alto = int(input("Proporciona el alto del rectángulo: "))
 ancho = int(input("Proporciona el ancho del rectángulo: "))
 area = alto * ancho
 perimetro = (alto + ancho)*2
 print(f"El perimetro de el rectángulo es {perimetro} y el area es {area}")
 
-
-# operadores de comparacion
 """
+# Operadores de reasignación
+"""
+miVariable3 = 10
+print(miVariable3)
 
+miVariable3 = miVariable3 + 1
+print(miVariable3)
+
+miVariable3 += 1
+print(miVariable3)
+
+# miVariable3 = miVariable -2
+miVariable3 -= 2
+print(miVariable3)
+
+# miVariable3 = miVariable3 * 3
+miVariable3 *= 3
+print(miVariable3)
+
+# miVariable3 = miVariable / 2
+miVariable3 /= 2
+print(miVariable3)
+# Algunos operadores aritméticos también nos permiten
+# realizar operaciones sobre cadenas de texto:
+# + concatenación  ej: 'ho' + 'la' = 'hola'
+# * repetición  ej: 'Hello world' * 4 = 'Hello world, Hello world,
+#  Hello world, Hello world'
+"""
+# Operadores de comparación
+"""
+d = 4
+b = 2
+print(f'd = {d}  y  b = {b}')
+# ==  Son iguales?
+resultado = d == b
+print(f'd y b son iguales?:        {resultado}')
+
+# !=  Son distintos?
+resultado = d != b
+print(f'd y b son distintos?:      {resultado}')
+
+# >   Es mayor que?
+resultado = d > b
+print(f'd es mayor que b?:         {resultado}')
+
+# <   Es menor que?
+resultado = d < b
+print(f'd es menor que b?:         {resultado}')
+
+# >=  Es mayor o igual que?
+resultado = d >= b
+print(f'd es mayor o igual que b?: {resultado}')
+
+# <=  Es menor o igual que?
+resultado = d <= b
+print(f'd es menor o igual que b?: {resultado}')
+"""
 # ejercicio par o impar
-
+"""
 num = int(input("ingrese un numero: "))
 if (num % 2) == 0:
     print("el numero es par")
@@ -155,4 +210,12 @@ if comprobador:
     print("el numero es par")
 else:
     print("el numero es impar")
+"""
 
+# Ejercicio: Determinar si es mayor de edad
+edadAdulto = 18
+edad = int(input("Introduzca la edad: "))
+if edad >= edadAdulto:
+    print(f'Tu edad es {edad} años, sos mayor de edad')
+else:
+    print(f'Tu edad es {edad} años, sos menor de edad')
