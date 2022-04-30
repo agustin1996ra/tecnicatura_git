@@ -196,7 +196,7 @@ print(f'd es mayor o igual que b?: {resultado}')
 resultado = d <= b
 print(f'd es menor o igual que b?: {resultado}')
 """
-# ejercicio par o impar
+# Ejercicio1 par o impar
 """
 num = int(input("ingrese un numero: "))
 if (num % 2) == 0:
@@ -212,7 +212,7 @@ else:
     print("el numero es impar")
 """
 
-# Ejercicio: Determinar si es mayor de edad
+# Ejercicio2: Determinar si es mayor de edad
 edadAdulto = 18
 edad = int(input("Introduzca la edad: "))
 if edad >= edadAdulto:
