@@ -55,8 +55,8 @@ Manejo de cadenas (String)
 """
 """
 miGrupoFavorito = "Snarky Puppy"
-caracteristicas = "The best contemporary Jazz Band"
-print("Mi grupo favorito es: "+miGrupoFavorito+". "+caracteristicas)
+características = "The best contemporary Jazz Band"
+print("Mi grupo favorito es: "+miGrupoFavorito+". "+características)
 # Acá un ejemplo de como se puede usar el +
 miGrupoFavorito2 = "Snarky Puppy"+". "+"The best contemporary Jazz Band"
 print("Mi grupo favorito es: "+miGrupoFavorito2)
@@ -64,13 +64,13 @@ print("Mi grupo favorito es: "+miGrupoFavorito2)
 # Otra forma de concatenar cadenas utilizando la coma.
 # Nótese que la concatenación con comas agrega un espacio.
 # Lo que puede generar problemas como con el "."
-print("Mi grupo favorito es:", miGrupoFavorito+".", caracteristicas)
+print("Mi grupo favorito es:", miGrupoFavorito+".", características)
 
 numero1 = "7"
 numero2 = "8"
 # Si trabajamos con cadenas solo concatena, no suma
 print(numero1+numero2)
-# pero si trabajamos con literales si lo hara
+# pero si trabajamos con literales si lo hará
 print(int(numero1) + int(numero2))
 
 print()
@@ -119,13 +119,13 @@ print(f"El resultado de la suma es: {suma}")
 resta = operandoA - operandoB
 print(f"El resultado de la resta es: {resta}")
 
-multiplicacion = operandoA * operandoB
+multi = operandoA * operandoB
 
 division = operandoA / operandoB
 
 division = operandoA // operandoB
 
-modulo = operandoA % opernadoB
+modulo = operandoA % operandoB
 
 exponente = operandoA ** operandoB
 
