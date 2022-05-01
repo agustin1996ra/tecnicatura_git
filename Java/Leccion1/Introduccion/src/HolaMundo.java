@@ -1,6 +1,8 @@
 
 public class HolaMundo {
     public static void main(String[] args) {
+        System.out.println("HolaMundo.main()");
+        /*
         System.out.println("Hola mundo desde Java");
         
         // Tipo int - entero
@@ -39,7 +41,7 @@ public class HolaMundo {
         System.out.println("Retroceso: \b\b" + nombre); // Caracter de retroceso
         System.out.println("Comillas simples: \'" + nombre + "\'");
         System.out.println("Comillas dobles: \"" + nombre + "\"");
-        
+        */
         // Clase Scanner
         /*
         Scanner entrada = new Scanner(System.in);
@@ -72,7 +74,7 @@ public class HolaMundo {
         System.out.println("La cadena es "+cadena2);
         */
         
-        // Tipos Enteros
+        // Tipos primitivos Enteros
         byte numEnteroByte = 127; // El valor minimo de byte -128 y el maximo 127
         System.out.println("numEnteroByte = " + numEnteroByte);
         System.out.println("Valor minimo del Byte: "+ Byte.MIN_VALUE);
@@ -93,7 +95,7 @@ public class HolaMundo {
         System.out.println("Valor minimo del long: "+ Long.MIN_VALUE);
         System.out.println("Valor maximo del long: "+ Long.MAX_VALUE);
         
-        // Tipos Flotantes
+        // Tipos primitivos Flotantes
         float numFloat = 3.4028235E38f; // Debemos agragar la letra "f" al final del número
         System.out.println("numFloat = " + numFloat);
         System.out.println("Valor minimo de float: "+ Float.MIN_VALUE);
@@ -103,6 +105,7 @@ public class HolaMundo {
         System.out.println("numDouble = " + numDouble);
         System.out.println("Valor minimo de double: "+ Double.MIN_VALUE);
         System.out.println("Valor maximo de double: "+ Double.MAX_VALUE);
+        
         
         
         
