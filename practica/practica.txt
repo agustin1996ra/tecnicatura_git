@@ -1,0 +1,16 @@
+- Este es un archivo creado en la practica de la clase 4 de Sistemas de 
+Procesamiento de datos.
+- Estamos practicando hacer modificacione en el area de trabajo para luego
+agragarla a el área de preparación, y luego hacer un commit.
+Esta practica ya la realizamos en la clase 3, pero estamos repasando
+ya que la claseanterio no tuvimos clace sincronica, ya que se corto el 
+internet de la docente. Esto lo hicimos con el archivo readme.txt en la 
+clase 3, y estas practica la utilizaremos en el trabajo del dia de hoy.
+
+
+Comandos utilizados en la clase:
+- git status
+- git add
+- git commit
+
+Notas de la Clase4:
