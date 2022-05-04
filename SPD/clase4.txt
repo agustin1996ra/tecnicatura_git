@@ -118,3 +118,22 @@ En la nueva rama podremos realizar commit sin que alteren el estado
 de la rama principal.
 
 
+
+El comando:
+
+$ git branch
+
+nos permite ver las ramas del repositorio, marcando donde tenemos el puntero
+con un * y en git bash con color
+
+
+El comando 
+
+$ git log --oneline --all --graph --decorate
+
+nos mostrara de manera un poco mas grafica los diferentes commit
+de nuestas ramas, marcando con una indexacion las diferentes ramas,
+programe un alias llamado "decobranch" en git bash.
+
+
+
