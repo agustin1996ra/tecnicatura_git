@@ -75,6 +75,7 @@ public class HolaMundo {
         */
         
         // Tipos primitivos Enteros
+        /*
         byte numEnteroByte = 127; // El valor minimo de byte -128 y el maximo 127
         System.out.println("numEnteroByte = " + numEnteroByte);
         System.out.println("Valor minimo del Byte: "+ Byte.MIN_VALUE);
@@ -105,8 +106,22 @@ public class HolaMundo {
         System.out.println("numDouble = " + numDouble);
         System.out.println("Valor minimo de double: "+ Double.MIN_VALUE);
         System.out.println("Valor maximo de double: "+ Double.MAX_VALUE);
+        */
+        // Inferencia de tipos var y tipos primitivos
+        /*
+        var numEntero = 20; // Las literales sin punto automaticamente son de tipo int
+        System.out.println("numEntero = " + numEntero);
+        var numFloat = 10.0F; // Automaticamente con el punto y la F se transforma en tipo float
+        System.out.println("numFloat = " + numFloat);
+        var numDouble = 10.0; // Automaticamente con el punto se transforma en tipo double
+        */
         
+        // Tipos primitivos char
+        char miVariableChar = 'a';
+        System.out.println("miVariableChar = " + miVariableChar);
         
+        char varCaracter = '\u0024'; // indicamos a Jaca la asignacion con el codigo unicode
+        System.out.println("varCaracter = " + varCaracter);
         
         
     }
