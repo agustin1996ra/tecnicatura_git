@@ -39,7 +39,7 @@ primeros 7 caracteres del hash.
 
 ej:
 
-```bash
+```gitbash
 rodri@laptop-agus MINGW64 ~/TecnicaturaGit/spd (master)
 $ git log --oneline
 c071838 (HEAD -> master) Commit de ejercicio como practica de la clase 4 de spd
