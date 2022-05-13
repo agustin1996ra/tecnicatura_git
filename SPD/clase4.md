@@ -127,7 +127,9 @@ $ git checkout -b <nombre de la nueva rama>
 Automaticamente nuestro puntero se movera a la rama nueva, para volver 
 debemos utilizar el comando 
 
+```
 $ git checkout master #o el hash de otro commit en la rama principal 
+```
 
 En la nueva rama podremos realizar commit sin que alteren el estado 
 de la rama principal.
