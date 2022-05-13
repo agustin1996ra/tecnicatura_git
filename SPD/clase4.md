@@ -63,39 +63,44 @@ ef5c4d0 Creamos los practiacas iniciales de python
 
 Utilizando el comando: (siendo x el numero de commit)
 
+```
 $ git log --oneline -n x
+```
 
 veremos una lista de los ultimos x commit.
 
 
 Entonces escribiendo el comando 
 
+```
 $ git checkout bb603f
-
+```
 EL nuevo commit HEAD seria "bb603f7 Avance de clase 4 de laboratorio",
 osea las modificaciones en nuestro proyecto se verian tal cual como lo que 
 incluimos en el commit bb603f7.
 
 Para luego volver al ultimo commit se utiliza
 
+```
 $ git checkout master
+```
 
-
-## git log --raw
+## `git log --raw`
 Este comando nos permite saber cuales fueron los cambios que pasaron en un 
 commit.
 Nos mostrará también que tipo de acciones hicimos si modificamos un archivo,
 lo borramos o añadimos algo nuevo. Además nos muestra el código de seguridad
 de nuestros commit.
 
-## git log --pritty=format:" "
+## `git log --pritty=format:" "`
 Este comando permite agregar el formato que se desee, por ejemplo:
 el nombre del autor, correo, fecha, etc. A la lista que genera el comando 
-"git log".
+`git log`.
 ej:
 
+```
 $ git log --pretty=format:"El autor del commit {%h} fue %an"
-
+```
 
 ## Ramas
 Dentro de mi rama (master) puedo crear ramas nuevas o auxiliares.
@@ -115,7 +120,9 @@ proyecto.
 
 Para crear una nueva rama se utiliza el comando 
 
+```
 $ git checkout -b <nombre de la nueva rama>
+```
 
 Automaticamente nuestro puntero se movera a la rama nueva, para volver 
 debemos utilizar el comando 
@@ -129,7 +136,9 @@ de la rama principal.
 
 El comando:
 
+```
 $ git branch
+```
 
 nos permite ver las ramas del repositorio, marcando donde tenemos el puntero
 con un * y en git bash con color
@@ -137,11 +146,13 @@ con un * y en git bash con color
 
 El comando 
 
+```
 $ git log --oneline --all --graph --decorate
+```
 
 nos mostrara de manera un poco mas grafica los diferentes commit
 de nuestas ramas, marcando con una indexacion las diferentes ramas,
-programe un alias llamado "decobranch" en git bash.
+programe un alias llamado "ramas" en git bash.
 
 
 
