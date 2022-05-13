@@ -1,6 +1,6 @@
 # Clase 4
 
-##Comandos que aprendimos en la clase anterior
+## Comandos que aprendimos en la clase anterior
 - git commit -am "nota de nuestro cambio"
 - git checkout "nombre de archivo"
 - git checkout -f
@@ -14,7 +14,9 @@ Cada commit tiene un número de id o #
 
 Con:
 
+```commandline 
 $ git checkout "número de identificación"
+```
 
 (del id de pueden copiar sólo los primeros 7 dígitos)
 
