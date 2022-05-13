@@ -24,36 +24,42 @@ Podremos ver entonces a como estaba nuestro proyecto sin las modificaciones nuev
 
 Para volver al presente donde esta mi último commit ejecutamos
 
+```bash
 $ git checkout master
+```
 
 Con el comando 
 
+```bash
 $ git log --oneline
+```
 
 obtendremos una lista de los commits hasta el momento, en la lista tendra como indice los 
 primeros 7 caracteres del hash. 
 
 ej:
 
-	rodri@laptop-agus MINGW64 ~/TecnicaturaGit/spd (master)
-	$ git log --oneline
-	c071838 (HEAD -> master) Commit de ejercicio como practica de la clase 4 de spd
-	b98f688 Elimine la carpeta nuevacarpeta, simplemente era de prueba.
-	3114029 Actualizacion de configuraciones
-	35d08d0 Correccion de las anotaciones
-	8cf9725 Cambio de nombre del proyecto para mayor consistencia
-	e3625a0 Avance de la clase4 de Programacion
-	253bd81 Avance de la clase4 de laboratorio
-	f5091a6 Avance de la clase4 de laboratorio
-	bb603f7 Avance de clase 4 de laboratorio
-	52c6b82 Avance de los proyectos de java y python
-	8520aa3 actualizamos readme.txt
-	13fa1fc Actividad realizada en la clase 3
-	683aa87 en este commit hicimos la prueba git add y git commit
-	4e2b8c4 no se que estoy haciendo
-	b97f0e7 Creamos el primer proyecto de Python La leccion 1
-	5cdd4a8 Iniciamos el proyecto de Java
-	ef5c4d0 Creamos los practiacas iniciales de python
+```bash
+rodri@laptop-agus MINGW64 ~/TecnicaturaGit/spd (master)
+$ git log --oneline
+c071838 (HEAD -> master) Commit de ejercicio como practica de la clase 4 de spd
+b98f688 Elimine la carpeta nuevacarpeta, simplemente era de prueba.
+3114029 Actualizacion de configuraciones
+35d08d0 Correccion de las anotaciones
+8cf9725 Cambio de nombre del proyecto para mayor consistencia
+e3625a0 Avance de la clase4 de Programacion
+253bd81 Avance de la clase4 de laboratorio
+f5091a6 Avance de la clase4 de laboratorio
+bb603f7 Avance de clase 4 de laboratorio
+52c6b82 Avance de los proyectos de java y python
+8520aa3 actualizamos readme.txt
+13fa1fc Actividad realizada en la clase 3
+683aa87 en este commit hicimos la prueba git add y git commit
+4e2b8c4 no se que estoy haciendo
+b97f0e7 Creamos el primer proyecto de Python La leccion 1
+5cdd4a8 Iniciamos el proyecto de Java
+ef5c4d0 Creamos los practiacas iniciales de python
+```
 
 Utilizando el comando: (siendo x el numero de commit)
 
