@@ -1,7 +1,11 @@
 
+import java.util.Scanner;
+
+
 public class HolaMundo {
     public static void main(String[] args) {
         System.out.println("HolaMundo.main()");
+        
         /*
         System.out.println("Hola mundo desde Java");
         
@@ -117,12 +121,80 @@ public class HolaMundo {
         */
         
         // Tipos primitivos char
+        /*
         char miVariableChar = 'a';
         System.out.println("miVariableChar = " + miVariableChar);
+       
         
-        char varCaracter = '\u0024'; // indicamos a Jaca la asignacion con el codigo unicode
+        char varCaracter = '\u0024'; // Indicamos a Java la asignación con el código unicode
         System.out.println("varCaracter = " + varCaracter);
+        char varCaracterDecimal = 36; // Valor decimal del juego de caracteres unicode
+        System.out.println("varCaracterDecimal = " + varCaracterDecimal);
+        char varCaracterSimbolo = '$'; // Un caracter especial, podemos copiar y pegar desde unicode
+        System.out.println("varCaracterSimbolo = " + varCaracterSimbolo);
         
+        var varCaracter1 = '\u0024'; // Indicamos a Java la asignación con el código unicode
+        System.out.println("varCaracter1 = " + varCaracter1);
+        var varCaracterDecimal1 = (char)36; // Valor entero y le asigna un tipo char
+        System.out.println("varCaracterDecimal1 = " + varCaracterDecimal1);
+        var varCaracterSimbolo1 = '$'; // Un caracter especial, podemos copiar y pegar desde unicode
+        System.out.println("varCaracterSimbolo1 = " + varCaracterSimbolo1);
+        */
         
+        // Tipos primitivos tipos booleanos
+        /*
+        boolean varBool = true;
+        System.out.println("varBool = " + varBool);
+        
+        if (varBool) {
+            System.out.println("La bandera es verde");
+        }
+        else{
+            System.out.println("La vandera es roja");
+        }
+        */
+        // Algoritmo: ¿Es mayor de edad?
+        /*
+        var edad = 30;
+        // var adulto = edad >= 18; // Esta es una expresión booleana
+        if (edad >= 18){
+            System.out.println("Eres mayor de edad");
+        }
+        else{
+            System.out.println("No eres mayor de edad");
+        }
+        */
+        // Conversion de tipos primitivos
+        /*
+        var edad = Integer.parseInt("20"); // La clase integer con el metodo parseint, transforma la cadena en un entero
+        System.out.println("edad = " + (edad + 1)); // resultado sera 21
+        
+        var edad1 = "20"; // tipo cadena
+        System.out.println("edad1 = " + (edad1 + 1)); // esto nos dara como resultado 201
+        
+        var valorPI = Double.parseDouble("3.1416");
+        System.out.println("valorPI = " + valorPI);
+        */
+        // Pedir un valor
+        /*
+        var entrada = new Scanner(System.in);
+        System.out.println("Digite su edad:");
+        edad = Integer.parseInt(entrada.nextLine());
+        System.out.println("entrada = " + entrada);
+        System.out.println("edad = " + edad);
+        */
+        // Conversión de tipos primitivos (parte dos)
+        /*
+        var edadTexto = String.valueOf(10);
+        System.out.println("edadTexto = " + edadTexto);
+        
+        var fraseChar = "programadores".charAt(12);
+        System.out.println("fraseChar = " + fraseChar);
+        
+        System.out.println("Digite un caracter");
+        var entrada = new Scanner(System.in);
+        fraseChar = entrada.nextLine().charAt(0); // por mas que pongamos una cadena, solo tomara el carater en el indice especificado.
+        System.out.println("fraseChar = " + fraseChar);
+        */
     }
 }
