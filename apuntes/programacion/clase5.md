@@ -55,7 +55,7 @@ System.out.println("varCaracter1 = " + varCaracter1);
 var varCaracterDecimal1 = (char)36; // Valor entero y le asigna un tipo char
 System.out.println("varCaracterDecimal1 = " + varCaracterDecimal1);
 var varCaracterSimbolo1 = '$'; // Un caracter especial, podemos copiar y pegar desde unicode
-System.out.println("varCaracterSimbolo = " + varCaracterSimbolo);
+System.out.println("varCaracterSimbolo1 = " + varCaracterSimbolo1);
 ```
 
 Ejecutar este código para ver el funcionamiento de `char` y otra muestra de `var`.
