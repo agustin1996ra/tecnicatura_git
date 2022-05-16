@@ -9,3 +9,6 @@ ya que me pidieron hacer un git checkout
 
 nuevas lineas
 -------------
+
+Esta es una pureba para ver el conflicto que surge si editamos el mismo archivo en dos ramas
+
