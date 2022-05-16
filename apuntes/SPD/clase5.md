@@ -163,5 +163,47 @@ $ git log --oneline --all --graph --decorate
 Nos aparecerá el commit con la fusión con el fin de la rama e integrándose a la 
 Rama Master.
 
+#### Para eliminar una fusión de ramas
 
+En caso de que se produzca un conflicto en mis ramas, con el siguiente comando 
+hacemos que cada rama vuelva a su posición original.
 
+```commandline
+git merge --abort
+```
+
+### Para eliminar una rama
+
+Estando ubicados en la rama main, borramos la rama auxiliar que habiamos creado.
+
+```commandline
+git branch -D "nombre de la rama"
+```
+
+> No se puede eliminar una rama en la cual estamos ubicados.
+> La bandera `-D` simpre debe ser en mayuscula.
+
+Usando:
+
+```
+git log --oneline --all -- graph --decorate
+```
+
+Nos aparecerá la rama main, pero desaparece la que habíamos creado.
+
+### ¿Como resolver conflictos en el merge de ramas?
+
+Cuando realizas un `git merge` y te aparece un conflicto deberas proceder de la 
+siguiente manera:
+
+- Abrí tu editor de texto, alli git agregará estos dos bloques de texto:
+
+	1. <<<<< HEAD(Current Change) (en este se mostrara en que rama estas ubicado y los
+	cambios actuales)
+	2. ===== (esta linea divide los bloques)
+	3. >>>>> "nombre-rama" (Incoming Change) (este mostrara la rama a la cual le estas 
+	haciendo el merge y sus cambios)
+
+- Analizar cuáles cambios deben ser tomados de estas ramas
+
+Analizar 
