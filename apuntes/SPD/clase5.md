@@ -236,3 +236,167 @@ Luego usamos el comando `git reset`:
 ```
 $ git reset (hash del commit)
 ```
+
+Para volver al commit que pertenece a ese hash. Volveremos a un estado 
+anteriorque se guarden los cambios en el commit. Podras editar 
+tu area de trabajo y luego agragrlo al "saged area" y hacer un commit
+para guardar esta version.
+
+Los archivos volverán a un estado anterior, donde no habiamos 
+comiteado
+
+Si trabajaron varias ramas en un mismo archivo se pueden generar
+conflictos si trabajan las mismas líneas de código.
+
+```
+$ git merge "nombre de la rama a eliminar"
+```
+
+Para abortar el `merge` si no se puede solucionar el conflicto.
+
+```
+$ git merge --abort
+$ git add # añadiremos las modificaciones hechas
+$ git commit -m "comentario"
+$ git branch # nos apareceran las ramas
+```
+
+Para eliminar las ramas no utilizadas, no olvidarse de que debemos
+poner el head en una rama que no se valla a eliminar.
+
+```
+$ git branch -D "nombre de la rama" # para eliminar las ramas no utilizadas
+```
+
+### Actividad n°2
+
+Ejecutamos los comandos visto durante la clase.
+
+#### Paso 1
+
+Creamos una nueva rama llamada IMAGEN
+
+```
+$ git checkout -b "imagen"
+```
+![creamos rama imagen](../img/creamos_rama_imagen.jpg)
+
+#### Paso 2
+
+Añadiremos dos imágenes a nuestro archivo desde nuestra área de 
+trabajo.
+
+En mi caso las agregare en la carpeta "TecnicaturaGit/imagen"
+
+![agregamos imagenes](../img/imagenes_agregadas.jpg)
+
+#### Paso 3
+
+Ejecutaremos, para ver los archivos que tenemos que añadir.
+
+```
+$ git status
+```
+
+![gitstatus](../img/status1.jpg)
+
+#### Paso 4
+
+Añadimos los archivos a nuestra área de preparación
+
+```
+$ git add .
+```
+
+En mi caso usare el comando `git add imagen`, para agregar a la rama
+imagen la carpeta imagen y sus archivos, por que no quiero agregar
+a esta rama las modificaciones de las notas de sistemas de procesaminto
+de datos.
+
+![gitadd](../img/gitadd1.jpg)
+
+
+Hacemos el commit
+
+```
+$ git commit -m "comentario del commit"
+```
+
+![git commit](../img/git_commit1.jpg)
+
+#### Paso 5
+
+Vemos que ramas tenemos
+
+```
+git branch
+```
+
+![git branch](../img/git_branch1.jpg)
+
+#### Paso 6
+
+Para visualizar los commit y las ramas creadas
+
+```
+$ git log --oneline --all --graph --decorate
+```
+
+![git log](../img/git_log1.jpg)
+
+#### Paso 7
+
+Debemos estar ubicados en nuestra rama main, usamos:
+
+```
+$ git switch master
+```
+
+
+
+#### Paso 8
+
+Para la fusión de las ramas
+
+```
+$ git merge "nombre de la rama que quiero fusionar"
+```
+
+#### Paso 9
+
+Usamos:
+
+```
+$ git log --oneline --all --graph --decorate
+```
+
+#### Paso 10
+
+Eliminamos la rama que ya no vamos utilizar
+
+```
+$ git branch -D "nombre de la rama que vamos a eliminar"
+```
+
+#### Paso 11
+
+Creamos otra rama y usamos el mismo archivo `readme/readme.txt` en
+las dos ramas (auxiliar y main), esto generará un conflicto.
+
+#### Paso 12
+
+Eliminamos el merge con 
+
+```
+$ git merge --abort 
+```
+
+Para elimnar la fusión de ramas
+
+#### Paso 13
+
+Podremos ver las ramas que nos quedan
+
+```
+$ git branch 
+```
