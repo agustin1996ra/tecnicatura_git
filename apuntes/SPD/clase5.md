@@ -204,6 +204,35 @@ siguiente manera:
 	3. >>>>> "nombre-rama" (Incoming Change) (este mostrara la rama a la cual le estas 
 	haciendo el merge y sus cambios)
 
-- Analizar cuáles cambios deben ser tomados de estas ramas
+- Analizar cuáles cambios deben ser tomados de estas ramas.
+- Borrar las línea que git agregó y dejar todos los cambios que serán utilizados.
 
-Analizar 
+Luego deberemos agregar la modificacion con el comando:
+
+```
+$ git add "nombre del archivo"
+```
+
+Y hacer el commit para finalizar el proceso de `merging`.
+
+```
+$ git commit -m "commentarios de nuestro merge"
+```
+
+### `git reset`
+
+Si después de hacer varias modificaciones a un archivo de una rama auxiliar y hacerle commit a esas
+modificaciones, y me arrepiento y quiero revertirlo y devolver ese archivo a como está en la rama
+master, podremos hacerlo con el comando `git reset`.
+
+Para ver el hash del commit al que se desea volver usamos:
+
+```
+$ git log
+```
+
+Luego usamos el comando `git reset`:
+
+```
+$ git reset (hash del commit)
+```
