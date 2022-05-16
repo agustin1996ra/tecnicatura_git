@@ -9,3 +9,7 @@ ya que me pidieron hacer un git checkout
 
 nuevas lineas
 -------------
+
+
+Esta es la modificacion que entrara en conflicto con la modificacion hecha en practica.
+
