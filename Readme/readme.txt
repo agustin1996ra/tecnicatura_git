@@ -13,7 +13,5 @@ nuevas lineas
 
 
 
-Lineas de conflicto rama master
-Lineas de conflicto rama_conflicto
-
+Esta es la nueva linea de conflicto con la rama auxiliar
 
