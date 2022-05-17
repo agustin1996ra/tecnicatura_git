@@ -396,7 +396,7 @@ $ git branch -D "nombre de la rama que vamos a eliminar"
 Creamos otra rama y usamos el mismo archivo `readme/readme.txt` en
 las dos ramas (auxiliar y main), esto generará un conflicto.
 
-![creo rama](..\img\creo_rama-conflicto.jpg)
+![creo rama](../img/creo_rama-conflicto.jpg)
 
 Edito el archivo readme para genera el conflicto
 ![edito readme](../img/edito_readme.jpg)
