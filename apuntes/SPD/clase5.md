@@ -137,7 +137,7 @@ dos sucursales: sucursal principal y sucursal de etapa. Ahora, fusionaremos la r
 del escenario con la rama (auxiliar) del escenario (stage?) con la rama principal 
 (main?).
 
-![git merge](../img/gir_merge2.jpg)
+![git merge](../img/git_merge2.jpg)
 
 > Siempre tener en cuenta que cuando se mezclan ramas se debe tener cuidado con los
 > archivos que se han tocado. Cuando no se tocan los mismos archivos no hay 
