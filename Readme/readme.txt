@@ -13,7 +13,4 @@ nuevas lineas
 
 
 
-Lineas de conflicto rama master
-Lineas de conflicto rama_conflicto
-
-
+Estas son las nuevas lineas de conflicto para probar `git merge --abort`
