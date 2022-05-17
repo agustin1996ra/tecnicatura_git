@@ -12,4 +12,8 @@ nuevas lineas
 
 
 
+
 Lineas de conflicto rama master
+Lineas de conflicto rama_conflicto
+
+
