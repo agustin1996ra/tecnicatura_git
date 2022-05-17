@@ -447,6 +447,8 @@ Eliminamos el merge con
 $ git merge --abort 
 ```
 
+![paramos merging](../img/merge_--abort.jpg)
+
 Para elimnar la fusión de ramas
 
 ### Paso 13
@@ -456,3 +458,5 @@ Podremos ver las ramas que nos quedan
 ```
 $ git branch 
 ```
+
+![ramas actuales](../img/git_branch.jpg)
