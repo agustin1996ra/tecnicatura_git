@@ -12,7 +12,4 @@ nuevas lineas
 
 
 
-Esta es la modificacion que entrara en conflicto con la modificacion hecha en practica.
-Esta es una pureba para ver el conflicto que surge si editamos el mismo archivo en dos ramas
-
-
+Lineas de conflicto rama master
