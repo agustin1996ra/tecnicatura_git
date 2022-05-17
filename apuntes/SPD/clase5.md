@@ -352,7 +352,7 @@ Debemos estar ubicados en nuestra rama main, usamos:
 $ git switch master
 ```
 
-
+![git switch](../img/git_switch1.jpg)
 
 #### Paso 8
 
@@ -362,6 +362,15 @@ Para la fusión de las ramas
 $ git merge "nombre de la rama que quiero fusionar"
 ```
 
+Se abrira el editor de codigo para dar el comantario del commit
+de la fusion.
+
+![editor de texto merge](../img/git_merge1.jpg)
+
+Luego volveremos a la consola ye veremos la información de la fusion.
+
+![git merge](../img/git_merge3.jpg)
+
 #### Paso 9
 
 Usamos:
@@ -369,6 +378,8 @@ Usamos:
 ```
 $ git log --oneline --all --graph --decorate
 ```
+
+![git log](../img/git_log2.jpg)
 
 #### Paso 10
 
@@ -378,10 +389,37 @@ Eliminamos la rama que ya no vamos utilizar
 $ git branch -D "nombre de la rama que vamos a eliminar"
 ```
 
+![eliminamos una rama](../img/git_merge_D1.jpg)
+
 #### Paso 11
 
 Creamos otra rama y usamos el mismo archivo `readme/readme.txt` en
 las dos ramas (auxiliar y main), esto generará un conflicto.
+
+![creo rama](..\img\creo_rama-conflicto.jpg)
+
+Edito el archivo readme para genera el conflicto
+![edito readme](../img/edito_readme.jpg)
+
+Edito el archivo readme en la rama master para generar el conflicto.
+![edito readme master](../img/edito_readme_master.jpg)
+
+![git log conflicto](../img/gitlogconficto.jpg)
+
+![git merge conflicto](../img/git_merge_conflicto.jpg)
+
+![abrimos readme](../img/abrimos_editor_merging.jpg)
+
+![edicion de readme para corregir el conflicto](../img/edicion_merging1.jpg)
+
+![edicion de readme para corregir el conflicto 2](../img/edicion_merging2.jpg)
+
+![status](../img/git_status_merging.jpg)
+
+![solucion de conflicto](../img/solucion_de_conflicto.jpg)
+
+![git log](../img/gitlogconficto1.jpg)
+
 
 #### Paso 12
 
