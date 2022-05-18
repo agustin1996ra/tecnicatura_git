@@ -50,7 +50,7 @@ Una regla general de git es que en la rama main nunca se
 debe trabajar en los cambios, solo en ramas auxiliares.
 
 Hay una regla que dice que en la rama main nunca se debe trabajar
-cambios, los debemos hacer a travez de las ramas auxiliares.
+cambios, los debemos hacer a traves de las ramas auxiliares.
 
 Ahora bien, si en dado caso nosotros queremos que estos
 cambios si se incorporen a la rama main, osea al proyecto como 
@@ -128,24 +128,137 @@ Cualquier archivo que ignoremos no aparecerá en la salida de un
 sean eliminados de tu equipo local, si no que permanecerán ahí 
 pero nunca se subirán al repositorio.
 
-Vamos a crear un documento para que luego sea ignorado por git
-de nombre requisitos
+## Ingnorando archivos
 
-
-
-
-### Para movernos de una rama a otra
+Para ignorar archivos utilizaremos el comando:
 
 ```
-git checkout master
-
-git switch nombre_de_rama
-```
-### Para ver las ramas que tengo
-
-```
-git branch
+$ git ignore
 ```
 
-### Como configurar de manera global el nuevo nombre de la rama master
+Este comando nos permite mover los archivos que no utilicemos en nuestras
+ramas de git.
+
+## Para cambiar de una rama a la otra
+
+En las clases anteriores estuvimos utilizando los comandos
+```
+$ git checkout master
+
+$ git switch nombre_de_rama
+```
+
+## Para ver las ramas que tengo
+
+Uno de los comandos que utilizamos para visualizar las ramas creadas
+
+```
+$ git branch
+```
+
+
+## Como configurar de manera global el nuevo nombre de la rama master
+
+Podemos cambiar el nombre de nuestra rama master a través de una configuración
+global.
+
+```
+$ git branch
+```
+Este comando nos permite visualizar las ramas que tengo
+
+### Para cambiar el nombre de las ramas:
+
+Para camiar el nombre de la rama master a main
+
+```
+$ git branch -m master main
+```
+
+Este comando solo te permite cambiar el nombre de la rama master a main o 
+al revés de main a master.
+
+### Como configurar de manera global el nuevo nombre de la rama master?
+
+Para modificar el nombre de la rama master cada vez que el repositorio se inicia
+y se inicie con el nuevo nombre se debe hacer una configuración global.
+
+Usando:
+
+```
+$ git config --global init.defaultbranch master main
+```
+
+Luego usamos el comando:
+
+```
+$ git config --list
+```
+Para ver los cambios.
+
+## Proyectos en git
+
+Cuando trabajamos proyectos en git por lo gneral trabajamos con diferentes
+versiones de nuestro proyecto. Los desarrolladores prefieren llevar siempre un
+proyecto por versiones, por paso o por diferentes puntos:
+
+- Se revisa el producto
+- Se realiza un testing rápido y se verifica que el proyecto vaya conforme a lo
+pedido.
+
+## Los tags
+
+**Git** nos permite crear este tipo de seguimiento o versiones.
+Para ello nos da los **tags**, un tag o etiqueta también es un identificador
+que nos permite seleccionar un grupo de modificaciones o cambios que realizamos
+y agruparlas en una version o **tag**.
+
+El comando que utilizaremos para ordenar nuestras diferentes versiones del 
+proyecto en el que estemos trabajando es el siguiente.
+
+```
+git tag nombre_de_la_etiqueta
+```
+
+Es importante seleccionar sólo los commit que van a ser parte de esa version
+y llevaran una etiqueta.
+
+¿como realizar la selección de los commit que quiero versionar o separar con una
+etiqueta?
+
+Para ello usaremos el comando:
+
+```
+git rest --hard hash
+```
+
+Solo quedan seleccionados los commit hasta el numero de hash que seleccionamos,
+esos commit serian los que formarán parte de la version o etiqueta.
+
+Para comprobar si mi etiqueta usamos el siguiente comando
+
+```
+$ git tag
+```
+
+Nos mostrara la etiqueta sobre la que estamos trabajando o que tenemos hasta
+el momento. 
+
+Usando el comando:
+
+```
+git show
+```
+
+Veremos la información de los cambios realizados en los archivos guardados en
+commit actual de la version mas reciente
+
+Para ver com se dispone la información en el gráfico de ramas usamos el
+comando:
+
+```
+git log --oneline --all --graph --decorate
+```
+
+Observaremos como 
 
