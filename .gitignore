@@ -1,5 +1,7 @@
 # Lista de todos los archivos ingnorados
-/Python
-/Java
-/Readme
-requisitos.txt
+Java/
+Python/
+Readme/
+practica/
+imagen/
+.idea/
