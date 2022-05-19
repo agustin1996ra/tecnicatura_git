@@ -241,8 +241,8 @@ Para comprobar si mi etiqueta usamos el siguiente comando
 $ git tag
 ```
 
-Nos mostrara la etiqueta sobre la que estamos trabajando o que tenemos hasta
-el momento. 
+Nos mostrara la etiqueta sobre la que estamos trabajando o que tenemos 
+hasta el momento. 
 
 Usando el comando:
 
@@ -260,5 +260,46 @@ comando:
 git log --oneline --all --graph --decorate
 ```
 
-Observaremos como 
+Observaremos como se muestra las etiquetas en los commits.
 
+### Tags con comentarios
+
+Seleccionamos uno de los commit desde donde queremos que figure
+nuestra etiqueta de nuestra version.
+
+Para ello utilizaremos:
+
+```
+git tag -a nombre -m "comentario" hash_de_commit
+```
+
+Por ejemplo:
+
+```
+git tag -a v1.0 -m "primera version de mi proyecto" 7bc3d84
+```
+
+## Cuando nos encontramos modificando archivos y se nos solicita unas nuevas modificaciones
+
+Cuando nos encontramos modificando, trabajando o creando más archivos
+de nuestro proyecto, ya sea porque vamos avanzando o porque simplemente
+hay modificaciones que hacer, es muy probable que en algún punto 
+tengamos que hacer algo asi como un freno de emergencia, como un 
+stop de emergencia.
+
+Por ejemplo: Si estamos trabajando en algún archivo y de pronto el 
+cliente pide una actualización urgente o un cambio que es de vida o
+muerte, es algo que debe hacerse en el momento.
+
+Pero aún no se ha terminado con las modificaciones que se estaban 
+realizando, no has acabado con tu progreso por multiples razones.
+
+cómo vamos a solucionar esto?
+
+### `git stash`
+
+Me permite generar un campo temporal en el que se va a guardar el progreso de nuestro proyecto.
+
+Hacemos la modificación que el cliente pide y ya luego podemos continuar en donde lo habíamos dejado.
+
+Vamos a teclear `git stash`.
