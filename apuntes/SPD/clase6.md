@@ -303,3 +303,29 @@ Me permite generar un campo temporal en el que se va a guardar el progreso de nu
 Hacemos la modificación que el cliente pide y ya luego podemos continuar en donde lo habíamos dejado.
 
 Vamos a teclear `git stash`.
+
+Y nos guardará los cambios sin que se alteren las modificaciones en 
+que estamos trabajando.
+
+Para realizar las modificaciones que nuestro cliente nos esta pidiendo
+con urgencia.
+
+Luego ejecutaremos `git add` y commitearemos las modificaciones.
+
+```
+git commit -am "mensaje del commit"
+```
+
+Luego con el comando 
+
+```
+git stash pop
+```
+
+Recuperaremos las modificaciones en las que estábamos trabajando y
+podremos seguir trabajando en ellas.
+
+El comando `git stash` me permite guardar las modificaciones que
+estaba realizando para atender alguna modificación más urgente y 
+después seguir trabajando en lo que estaba realizando.
+
