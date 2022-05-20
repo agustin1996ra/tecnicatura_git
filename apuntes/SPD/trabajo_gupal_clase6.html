@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>trabajo_gupal_clase6.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="actividad-n%C2%B0-6">Actividad n° 6</h1>
+<h2 id="grupo-mate-coders">Grupo: MATE CODERS</h2>
+<h3 id="integrantes">Integrantes:</h3>
+<ul>
+<li>Facundo Martin Giacomozzi</li>
+<li>Gabriel Romero</li>
+<li>Lautaro Urquiza</li>
+<li>Federico Pfund</li>
+<li>Matias Canevaro</li>
+<li>Eduardo Luis Gómez</li>
+<li>Sabrina Mantero</li>
+<li>Cinthia Fernanda Segovia</li>
+<li>Martín Alejandro Torres</li>
+<li>Agustin Rodriguez Alvarez</li>
+</ul>
+<h2 id="consignas">Consignas</h2>
+<ol>
+<li>¿Cómo creamos una carpeta desde <strong>Git Bash</strong>?</li>
+<li>¿Cómo iniciamos nuestro <em>repositorio git</em>?</li>
+<li>¿Qué comando utilizamos al configurar usuario y email?</li>
+<li>¿Cuál es el comando que permite viajar en el tiempo de los diferentes <em>commit</em>?</li>
+<li>¿A que llamamos <em>rama master</em> o <em>main</em>?</li>
+<li>¿Cuál es la diferencia entre <em>rama auxiliar</em> y <em>rama main</em>?</li>
+<li>¿Qué comando utilizamos para cambiar de una rama a otra?</li>
+<li>¿Se puede modificar la <em>rama master</em>?</li>
+<li>¿Cuál es el comando para crear una nueva rama?</li>
+<li>Mencionar 3 funcionalidades que tiene el comando <code>git checkout</code>.</li>
+<li>¿Cuál es el comando que me permite ver de manera gráfica los <em>commit</em> y las <em>ramas</em> creadas?</li>
+<li>Realizar una captura del ultimo punto realizado, se puede utilizar captura de la actividad n° 4.</li>
+</ol>
+<h2 id="respuestas">Respuestas</h2>
+<h3 id="1-%C2%BFc%C3%B3mo-creamos-una-carpeta-desde-git-bash">1. ¿Cómo creamos una carpeta desde <strong>Git Bash</strong>?</h3>
+<p>Para crear una carpeta desde <strong>Git Bash</strong> utilizaremos el
+comando <code>mkdir</code>. Teniendo en cuenta la dirección en la que
+nos encontramos en el sistema de archivos, este espacio
+alojará nuestra nueva carpeta, utilizando el comando de este
+modo.</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~
+$ mkdir nombre_nueva_carpeta
+</div></code></pre>
+<blockquote>
+<p><strong>Nota:</strong> Tener en cuenta que el símbolo <code>~</code> nos indica que
+estamos en la carpeta de usuario, en este caso sera:
+<code>/c/Users/usuario/</code></p>
+</blockquote>
+<p>Si deseamos poner un nombre de carpeta dejando espacio entre
+las palabras que conforman al nombre deberemos ponerlo entre
+comillas.</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~
+$ mkdir <span class="hljs-string">"nombre nueva carpeta"</span>
+</div></code></pre>
+<blockquote>
+<p><strong>Nota:</strong>  Tener en cuenta que el uso de nombres de carpetas
+con espacios puede traernos problemas, ya que las
+direcciones de capetas que contengan espacios siempre
+deberán escribirse entre comillas.</p>
+</blockquote>
+<h3 id="2-%C2%BFc%C3%B3mo-iniciamos-nuestro-repositorio-git">2. ¿Cómo iniciamos nuestro <em>repositorio git</em>?</h3>
+<p>Para iniciar nuestro <em>repositorio git</em>, debemos
+posicionarnos en la carpeta que contendrá nuestro
+repositorio, y luego ejecutaremos el comando <code>git init</code>.</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio
+$ git init
+</div></code></pre>
+<blockquote>
+<p>En este caso el nombre de la carpeta que contiene nuestro
+repositorio se llama <code>/repositorio</code> y su dirección completa
+es <code>/c/Users/usuario/repositorio</code></p>
+</blockquote>
+<p>Luego de usar el comando <code>git init</code>, veremos que <strong>Git Bash</strong>
+nos indicara en que rama estamos. Esto nos comprueba que el
+repositorio fue iniciado. El nombre de la rama se mostrara
+entre paréntesis al lado derecho de la dirección actual.</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (main)
+$ 
+</div></code></pre>
+<h3 id="3-%C2%BFqu%C3%A9-comando-utilizamos-al-configurar-usuario-y-email">3. ¿Qué comando utilizamos al configurar usuario y email?</h3>
+<p>El comando que se utiliza para configurar el usuario de
+manera global es:</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (main)
+$ git config --global user.name <span class="hljs-string">"nombre de usuario"</span>
+</div></code></pre>
+<p>Y el que utilizaremos para configurar el email del usuario es:</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (main)
+$ git config --global user.email <span class="hljs-string">"nombre@example.com"</span>
+</div></code></pre>
+<p>Para ver que configuraciones tenemos guardadas usaremos el
+comando:</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (main)
+$ git config -l
+</div></code></pre>
+<p>Nos mostrara una lista con todas las configuraciones
+aplicadas a <strong>Git Bash</strong>.</p>
+<h3 id="4-%C2%BFcu%C3%A1l-es-el-comando-que-permite-viajar-en-el-tiempo-de-los-diferentes-commit">4. ¿Cuál es el comando que permite viajar en el tiempo de los diferentes <em>commit</em>?</h3>
+<p>El comando que nos permite viajar en el tiempo es <code>git  checkout &lt;hash&gt;</code></p>
+<p>Lo utilizaremos de la siguiente manera:</p>
+<p>Primero debemos obtener el hash usando <code>git log --oneline</code></p>
+<blockquote>
+<p><strong>Nota:</strong> debemos tener en cuenta que el comando <code>git log --oneline</code> nos
+mostrara solo los primeros 7 caracteres del hash del commit,estos sirven perfectamente para dar la indicación de donde queremos viajar. Otro sera el resultado del comando <code>git log</code>
+que nos mostrara el hash completo de los <em>commit</em>.</p>
+</blockquote>
+<p>Después usaremos el numero de hash al <em>commit</em> que deseamos
+viajar, como veremos en el siguiente ejemplo:</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (main)
+$ git checkout 14f5fd6
+</div></code></pre>
+<p>En este caso viajaremos al <em>commit</em> con el hash <code>14f5fd6</code>.
+Como veremos nos aparecerá marcado entre paréntesis al lado
+de la dirección de la carpeta actual.</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio ((14f5fd6...))
+$ 
+</div></code></pre>
+<h3 id="5-%C2%BFa-qu%C3%A9-llamamos-rama-master-o-main">5. ¿A qué llamamos <em>rama master</em> o <em>main</em>?</h3>
+<p>Llamamos rama <em>master</em> o <em>main</em>, a una linea de tiempo de
+<em>commits</em>, esta en particular es la rama principal de un
+repositorio. Se crea por defecto en el inicio de un
+repositorio y en esta deberán estar las versiones principales
+de nuestro proyecto.</p>
+<h3 id="6-%C2%BFcu%C3%A1l-es-la-diferencia-entre-rama-auxiliar-y-rama-main">6. ¿Cuál es la diferencia entre rama <em>auxiliar</em> y rama <em>main</em>?</h3>
+<p>La diferencia principal es que la rama <em>main</em>, será nuestra
+rama principal en esta deberán estar todas las modificaciones
+y archivos para que nuestro proyecto funcione. En cambio
+en una rama <em>auxiliar</em> se desprende de la rama <em>main</em> o de
+otra rama <em>auxiliar</em>, y en esta se trabajara en paralelo de la
+rama <em>main</em> hasta que las tareas por las que se creo esta rama
+se hayan cumplido, una vez pase esto se pasara a fusionar la
+rama <em>auxiliar</em> con la rama <em>main</em>, y se dará comienzo a una
+nueva version de nuestro proyecto.</p>
+<h3 id="7-%C2%BFqu%C3%A9-comando-utilizamos-para-cambiar-de-una-rama-a-otra">7. ¿Qué comando utilizamos para cambiar de una rama a otra?</h3>
+<p>Para ello utilizaremos el comando <code>git switch</code>, dando como
+dato el nombre de la rama a la que queremos cambiar</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (main)
+$ git switch rama_auxiliar
+usuario@computadora MINGW64 ~/repositorio (rama_auxiliar)
+$ 
+</div></code></pre>
+<h3 id="8-%C2%BFse-puede-modificar-la-rama-master">8. ¿Se puede modificar la rama <em>master</em>?</h3>
+<p>Si se puede cambiar su nombre por <em>main</em>, esto se hace
+principalmente por que en ingles el termino <em>master</em>
+hace referencia al esclavismo. Era la forma de referirse
+a el 'amo', aquella persona que poseía uh ser humano como
+esclavo.</p>
+<p>Para hacer este cambio de nombre se utiliza el comando:</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (master)
+$ git branch -m master main
+usuario@computadora MINGW64 ~/repositorio (main)
+$ 
+</div></code></pre>
+<p>Este comando no es perdurable, lo que quiere decir es que
+volverá a llamarse <em>master</em>, cuando cerremos y volvamos a
+abrir <strong>Git Bash</strong>.</p>
+<p>Para hacerlo de forma permanente debemos usar el comando:</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (master)
+$ git config --global init.defaultbranch master main
+</div></code></pre>
+<p>De esta manera cada vez que iniciemos el programa se cambiara
+el nombre de nuestra rama <em>master</em>.</p>
+<h3 id="9-%C2%BFcu%C3%A1l-es-el-comando-para-crear-una-nueva-rama">9. ¿Cuál es el comando para crear una nueva rama?</h3>
+<p>Para crear una nueva rama usaremos el comando <code>git checkout</code>
+con la bandera <code>-b</code> continuado por el nombre de la nueva rama.</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (main)
+$ git checkout -b rama_auxiliar
+
+
+usuario@computadora MINGW64 ~/repositorio (rama_auxiliar)
+$ 
+
+</div></code></pre>
+<h3 id="10-mencionar-3-funcionalidades-que-tiene-el-comando-git-checkout">10. Mencionar 3 funcionalidades que tiene el comando <code>git checkout</code></h3>
+<h4 id="1-crear-ramas">1. Crear ramas</h4>
+<p>Como vimos en el ejercicio anterior con el comando <code>git  checkout -b</code> y un nombre podemos crear una rama.</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (main)
+$ git checkout -b rama_auxiliar
+
+
+usuario@computadora MINGW64 ~/repositorio (rama_auxiliar)
+$ 
+
+</div></code></pre>
+<h4 id="2-viajar-en-el-tiempo">2. Viajar en el tiempo</h4>
+<p>Con el comando <code>git checkout</code> y un hash en especifico
+podremos trasladar el <code>HEAD</code> nuestro puntero. Y viajaremos
+al estado en que teníamos nuestro repositorio a la hora de
+hacer ese <em>commit</em>.</p>
+<p>Ejemplo:</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio
+$ git checkout 14f5fd6
+
+usuario@computadora MINGW64 ~/repositorio ((14f5fd6...))
+$ 
+</div></code></pre>
+<h4 id="3-ir-al-ultimo-commit-de-la-rama-seleccionada">3. Ir al ultimo <em>commit</em> de la rama seleccionada</h4>
+<p>En el caso de que usemos el comando <code>git checkout</code> continuado
+del nombre de una rama moveremos el <code>HEAD</code> al último
+<em>commit</em> de la rama seleccionada.</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio ((14f5fd6...))
+$ git checkout rama_auxiliar
+Previous HEAD position was 14f5fd6 commit
+Switched to branch <span class="hljs-string">'rama_auxiliar'</span>
+
+usuario@computadora MINGW64 ~/repositorio (rama_auxiliar)
+$
+</div></code></pre>
+<h3 id="11-%C2%BFcu%C3%A1l-es-el-comando-que-me-permite-ver-de-manera-gr%C3%A1fica-los-commit-y-las-ramas-creadas">11. ¿Cuál es el comando que me permite ver de manera gráfica los <em>commit</em> y las ramas creadas?</h3>
+<p>El comando que debemos ejecutar para poder ver las ramas y
+todos los <em>commit</em> de estas graficados, de una manera un poco
+mas visualmente entendible es:</p>
+<pre class="hljs"><code><div>usuario@computadora MINGW64 ~/repositorio (main)
+$ git <span class="hljs-built_in">log</span> --oneline --all --graph --decorate
+</div></code></pre>
+<p>Un ejemplo de la salida de este comando:
+<img src="../img/ramas.jpg" alt="ramas"></p>
+<h3 id="12-realizar-una-captura-del-ultimo-punto-realizado-se-puede-utilizar-captura-de-la-actividad-n%C2%B04">12. Realizar una captura del ultimo punto realizado, se puede utilizar captura de la actividad n°4.</h3>
+
+</body>
+</html>

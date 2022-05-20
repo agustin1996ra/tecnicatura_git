@@ -329,3 +329,7 @@ El comando `git stash` me permite guardar las modificaciones que
 estaba realizando para atender alguna modificación más urgente y 
 después seguir trabajando en lo que estaba realizando.
 
+Añado las modificaciones de urgencia y luego ejecuto el 
+comando `git stash pop` y me aparecerán las modificaciones
+en las que estaba trabajando y que ya están listas para 
+añadir y commitear.
