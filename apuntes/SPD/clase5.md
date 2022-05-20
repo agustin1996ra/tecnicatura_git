@@ -7,7 +7,7 @@ Sistema de Procesamiento de datos, clase del dia 10/05/2022
 El funcionamiento de git transcurre en tres espacios o estados de nuestro 
 proyecto. Los cuales se llaman en ingles Working Directory, Staging area, Git
 Repository. En castellano lo traduciriamos como carpeta de trabajo, area de 
-escenificacion o montaje, almacen git.
+escenificacion o montaje y almacen git.
 
 En la **Carpeta de trabajo** es donde trbajaremos en las distintas piezas o modulos
 que compondran a nuestro trabajo. Se podria decir que es donde desarrollaremos
@@ -121,7 +121,7 @@ para reflejar la fusión y la rama de destino no se ve afectada. Esto significa 
 a menudo, `git merge` se usa junto con `git checkout` para seleccionar la rama 
 actual y `git branch` para eliminar una rama fuente desactualizada.
 
-![git merge](../img/gir_merge.jpg)
+![git merge](../img/git_merge.jpg)
 
 #### ¿Cómo funciona `git merge`?
 
@@ -201,7 +201,7 @@ siguiente manera:
 	1. <<<<< HEAD(Current Change) (en este se mostrara en que rama estas ubicado y los
 	cambios actuales)
 	2. ===== (esta linea divide los bloques)
-	3. >>>>> "nombre-rama" (Incoming Change) (este mostrara la rama a la cual le estas 
+	3. \>\>\>\>\> "nombre-rama" (Incoming Change) (este mostrara la rama a la cual le estas 
 	haciendo el merge y sus cambios)
 
 - Analizar cuáles cambios deben ser tomados de estas ramas.
@@ -268,11 +268,11 @@ poner el head en una rama que no se valla a eliminar.
 $ git branch -D "nombre de la rama" # para eliminar las ramas no utilizadas
 ```
 
-### Actividad n°2
+# Actividad n°2
 
 Ejecutamos los comandos visto durante la clase.
 
-#### Paso 1
+## Paso 1
 
 Creamos una nueva rama llamada IMAGEN
 
@@ -281,7 +281,7 @@ $ git checkout -b "imagen"
 ```
 ![creamos rama imagen](../img/creamos_rama_imagen.jpg)
 
-#### Paso 2
+## Paso 2
 
 Añadiremos dos imágenes a nuestro archivo desde nuestra área de 
 trabajo.
@@ -290,7 +290,7 @@ En mi caso las agregare en la carpeta "TecnicaturaGit/imagen"
 
 ![agregamos imagenes](../img/imagenes_agregadas.jpg)
 
-#### Paso 3
+## Paso 3
 
 Ejecutaremos, para ver los archivos que tenemos que añadir.
 
@@ -300,7 +300,7 @@ $ git status
 
 ![gitstatus](../img/status1.jpg)
 
-#### Paso 4
+## Paso 4
 
 Añadimos los archivos a nuestra área de preparación
 
@@ -324,7 +324,7 @@ $ git commit -m "comentario del commit"
 
 ![git commit](../img/git_commit1.jpg)
 
-#### Paso 5
+## Paso 5
 
 Vemos que ramas tenemos
 
@@ -334,7 +334,7 @@ git branch
 
 ![git branch](../img/git_branch1.jpg)
 
-#### Paso 6
+## Paso 6
 
 Para visualizar los commit y las ramas creadas
 
@@ -344,7 +344,7 @@ $ git log --oneline --all --graph --decorate
 
 ![git log](../img/git_log1.jpg)
 
-#### Paso 7
+## Paso 7
 
 Debemos estar ubicados en nuestra rama main, usamos:
 
@@ -354,7 +354,7 @@ $ git switch master
 
 ![git switch](../img/git_switch1.jpg)
 
-#### Paso 8
+## Paso 8
 
 Para la fusión de las ramas
 
@@ -371,7 +371,7 @@ Luego volveremos a la consola ye veremos la información de la fusion.
 
 ![git merge](../img/git_merge3.jpg)
 
-#### Paso 9
+## Paso 9
 
 Usamos:
 
@@ -381,7 +381,7 @@ $ git log --oneline --all --graph --decorate
 
 ![git log](../img/git_log2.jpg)
 
-#### Paso 10
+## Paso 10
 
 Eliminamos la rama que ya no vamos utilizar
 
@@ -391,37 +391,55 @@ $ git branch -D "nombre de la rama que vamos a eliminar"
 
 ![eliminamos una rama](../img/git_merge_D1.jpg)
 
-#### Paso 11
+## Paso 11
 
 Creamos otra rama y usamos el mismo archivo `readme/readme.txt` en
 las dos ramas (auxiliar y main), esto generará un conflicto.
 
 ![creo rama](../img/creo_rama-conflicto.jpg)
 
-Edito el archivo readme para genera el conflicto
+### Edito el archivo readme para genera el conflicto
+
 ![edito readme](../img/edito_readme.jpg)
 
-Edito el archivo readme en la rama master para generar el conflicto.
+### Edito el archivo readme en la rama master para generar el conflicto.
+
 ![edito readme master](../img/edito_readme_master.jpg)
+
+### Vemos los commits de las ramas antes de la fusion
 
 ![git log conflicto](../img/gitlogconficto.jpg)
 
+### Vemos como al ejecutar merge se genera un conflicto con el archivo `Readme/readme.txt`
+
 ![git merge conflicto](../img/git_merge_conflicto.jpg)
 
-![abrimos readme](../img/abrimos_editor_merging.jpg)
+### Abrimos el archivo con un editor de texto
+
+ ![abrimos readme](../img/abrimos_editor_merging.jpg)
+
+### Las lineas que hapuesto git delimitan las diferencias de las dos ramas
 
 ![edicion de readme para corregir el conflicto](../img/edicion_merging1.jpg)
 
+### Editamos el codigo como queremos que quede y borramos las lineas delimitadoras de git
+
 ![edicion de readme para corregir el conflicto 2](../img/edicion_merging2.jpg)
+
+### Vemos que dentro de `unmerged paths:` nos figura Readme/readme.txt como: modificado en las dos ramas (***both modified***)
 
 ![status](../img/git_status_merging.jpg)
 
+### Y por ultimo hacemos un commit para terminar el proceso de fusion `merging`
+
 ![solucion de conflicto](../img/solucion_de_conflicto.jpg)
+
+### Vemos como con `git log --oneline --all --graph --decorate` se representa la fusion de las ramas
 
 ![git log](../img/gitlogconficto1.jpg)
 
 
-#### Paso 12
+### Paso 12
 
 Eliminamos el merge con 
 
@@ -429,12 +447,16 @@ Eliminamos el merge con
 $ git merge --abort 
 ```
 
+![paramos merging](../img/merge_--abort.jpg)
+
 Para elimnar la fusión de ramas
 
-#### Paso 13
+### Paso 13
 
 Podremos ver las ramas que nos quedan
 
 ```
 $ git branch 
 ```
+
+![ramas actuales](../img/git_branch.jpg)
