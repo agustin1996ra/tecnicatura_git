@@ -184,7 +184,7 @@ public class HolaMundo {
         System.out.println("edad = " + edad);
         */
         // Conversión de tipos primitivos (parte dos)
-        
+        /*
         var edadTexto = String.valueOf(10);
         System.out.println("edadTexto = " + edadTexto);
         
@@ -195,6 +195,25 @@ public class HolaMundo {
         var entrada = new Scanner(System.in);
         fraseChar = entrada.nextLine().charAt(0); // por mas que pongamos una cadena, solo tomara el carater en el indice especificado.
         System.out.println("fraseChar = " + fraseChar);
+        */
+        
+        // Operadores
+        int num1 = 5, num2 = 4;
+        var solucion = num1 + num2;
+        System.out.println("solucion suma= " + solucion);
+        
+        solucion = num1 - num2;
+        System.out.println("solucion resta= " + solucion);
+        
+        solucion = num1 * num2;
+        System.out.println("solucion multiplicacion = " + solucion);
+        
+        solucion = num1 / num2;
+        System.out.println("solucion division= " + solucion);
+        
+        var solucion2 = 3.4 / num2;
+        System.out.println("solucion2 = " + solucion2);
+        
         
     }
 }
