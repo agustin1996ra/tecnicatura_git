@@ -10,4 +10,11 @@ Para este paso debemos tener lo siguientes datos:
 - Mail con el que nos creamos la cuenta de github.com
 - Contraseña de la cuenta que nos deseamos conectar
 
+### Configuración del usuario
+
+```bash
+usuario@computadora MIGW64 
+
+```
+
 ##
