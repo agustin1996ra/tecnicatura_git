@@ -292,3 +292,5 @@ Un ejemplo de la salida de este comando:
 ![ramas](../img/ramas.jpg)
 
 ### 12. Realizar una captura del ultimo punto realizado, se puede utilizar captura de la actividad n°4.
+
+![captura actividad 4](./capturasclase6/capturamia.jpg)
