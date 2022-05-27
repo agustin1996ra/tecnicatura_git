@@ -36,6 +36,6 @@ Para poder conectarse a **github.com** con **Git Bash** se utiliza el protocolo 
 
 Los sistemas de llaves publica-privada, funcionan utilizando algoritmos que encriptan diversos archivos que se enviaran por internet. 
 
-Para utilizar el servicio de SSH tenemos que generar una llave SSH e
+Para utilizar el servicio de SSH tenemos que generar una llave SSH 
 
 
