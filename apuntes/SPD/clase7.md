@@ -1,3 +1,9 @@
+# Tres estados de git 
+
+![estados de git](./img_guia/estados_de_git.jpg)
+
+----
+
 # Guía de comandos
 
 ## Comandos de Bash
@@ -211,6 +217,8 @@ Cuando vemos el estado de los archivos en git podemos encontrar las siguientes b
 > - A: Added
 > - D: Deleted
 > - U: Unmerged
+
+-----
 
 
 # Comandos y ejercitación Git
