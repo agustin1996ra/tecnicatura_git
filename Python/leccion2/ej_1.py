@@ -1,5 +1,4 @@
-"""
-Ejercicio 1:
+""" Ejercicio 1:
 Debemos plasmar la expresión en una expresión
 algorítmica, ósea hacerlo en código
 
