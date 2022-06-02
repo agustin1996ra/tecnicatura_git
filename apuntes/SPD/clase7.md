@@ -142,29 +142,75 @@ trabajando en ellas.
 
 ## Comandos de ramas
 
-### 
+### `git branch`
 
+Nos permite ver las ramas del repositorio.
 
+### `git branch nombre_rama`
 
+Nos permite crear una nueva rama.
 
+### `git branch -d nombre_rama`
 
+Borramos la rama indicada, esto es necesario después de que ya fusionamos y terminamos de usar la rama auxiliar.
 
+### `git branch -D nombre_rama`
 
+Elimina la rama qe estamos indicando y que no vamos a utilizar.
+Siempre debemos estar ubicados en la rama *main*.
 
+### `git branch -m master main`
 
+Cambiamos el nombre de la rama *master* a *main*.
 
+### `git checkout`
 
+Este comando te permite crear ramas y te ayuda a navegar entre ellas. Por ejemplo, el siguiente comando crea una nueva y automáticamente se cambia a ella. También nos permitirá viajar entre los diferentes *commmit*.
 
+### `git checkout -b nombre_rama`
 
+Nos permite crear una nueva rama.
 
+### `git checkout nombre_rama`
 
+Nos permite movernos de una rama a otra.
 
+### `git merge nombre_rama`
 
+Nos permite la fusión de nuestras ramas.
 
+### `git merge --abort`
 
+Permite eliminar la fusión de ramas en caso de no poder solucionar un conflicto o arrepentirnos de la fusión.
 
+## Comandos de control o seguimiento
 
+### `git tag`
 
+Nos muestra la lista de las versiones del proyecto.
+
+### `git tag 'version'`
+
+Me permite crear etiquetas para versionar un proyecto.
+
+### `git tag -a 'version' -m 'comentario de version'`
+
+Me permite crear una etiqueta con un comentario.
+
+### `git tag -d 'version'`
+
+Me permite eliminar una etiqueta.
+
+## Banderas de estados git
+
+Cuando vemos el estado de los archivos en git podemos encontrar las siguientes banderas. Podemos visualizarlas en `git diff`.
+
+> - M: Modified
+> - C: Copy edit
+> - R: Rename edit
+> - A: Added
+> - D: Deleted
+> - U: Unmerged
 
 
 # Comandos y ejercitación Git
