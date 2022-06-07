@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>actividadgrupal_clase8_SPD.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="trabajo-grupal-n%C2%B03">Trabajo grupal n°3</h1>
+<h2 id="integrantes-del-grupo">Integrantes del grupo</h2>
+<ul>
+<li>Facundo Martin Giacomozzi</li>
+<li>Gabriel Romero</li>
+<li>Lautaro Urquiza</li>
+<li>Federico Pfund</li>
+<li>Matias Canevaro</li>
+<li>Eduardo Luis Gómez</li>
+<li>Sabrina Mantero</li>
+<li>Cinthia Fernanda Segovia</li>
+<li>Martín Alejandro Torres</li>
+<li>Agustin Rodriguez Alvarez</li>
+</ul>
+<h1 id="actividades">Actividades</h1>
+<h2 id="actividad-n%C2%B01">Actividad n°1</h2>
+<p>Responder el cuestionario para asistencia (aula del campus)</p>
+<h2 id="actividad-n%C2%B02">Actividad n°2</h2>
+<ol>
+<li>
+<p>Realizar la siguiente actividad evaluativa de manera grupal</p>
+<ol>
+<li>Crear un nuevo repositorio con el nombre clase8</li>
+<li>Crear tres carpetas: Martes, Miércoles y Jueves</li>
+<li>Guardar en cada carpeta documentos de texto.</li>
+<li>Realizar modificaciones, añadir los cambios y hacer <em>commit</em> utilizando cualquier editor de texto.</li>
+</ol>
+</li>
+<li>
+<p>Crear tres ramas con sus <em>commit</em></p>
+<ol>
+<li>Crear una nueva rama con el nombre de &quot;Desarrollo&quot;.</li>
+<li>Crear una nueva carpeta con el nombre &quot;Viernes&quot; ubicados en la nueva rama.</li>
+<li>Añadir documentos de texto, modificar el documento y realizar los <em>commit</em> (5 modificaciones con sus <em>commit</em>).</li>
+<li>Mergear a la rama auxiliar a la rama <em>main</em>.</li>
+<li>Creamos una nueva rama con el nombre &quot;Proceso&quot;.</li>
+<li>Aplicamos los pasos anteriores con una nueva carpeta que diga &quot;Sábado&quot; añadimos documento de texto, guardamos, añadimos, <em>commiteamos</em> (5 <em>commit</em>).</li>
+<li>Y por ultimo mergeamos a la rama <em>main</em>.</li>
+<li>Estando ubicados en la <em>main</em> creamos otra rama nueva con el nombre &quot;tabla&quot;.</li>
+<li>Aplicamos los pasos realizados en las ramas anteriores y creamos una carpeta &quot;Lunes&quot;, añadimos documentos de texto, guardamos, añadimos, hacemos 5 <em>commit</em> y mergeamos.</li>
+</ol>
+</li>
+<li>
+<p>Eliminamos ramas auxiliares</p>
+<ol>
+<li>Eliminamos solo dos ramas auxiliares. Tener en cuenta que para eliminar las ramas auxiliares se debe estar ubicado en la rama <em>main</em>.</li>
+<li>Comprobar la cantidad de ramas que tiene nuestro proyecto una vez eliminada las dos ramas auxiliares.</li>
+<li>Enviar capturas con el nombre del grupo y de los integrantes (indique puntos trabajados en cada captura realizada) Formato pdf, word, PowerPoint, etc.</li>
+</ol>
+</li>
+</ol>
+<h1 id="resoluci%C3%B3n-de-la-actividad">Resolución de la actividad</h1>
+<h2 id="creamos-el-repositorio-clase-8">Creamos el repositorio Clase 8</h2>
+<p><img src="./creacion_del_repositorio.jpg" alt="creacion del repositorio"></p>
+<h2 id="creamos-las-tres-carpetas-martes-mi%C3%A9rcoles-y-jueves">Creamos las tres carpetas Martes, Miércoles y Jueves</h2>
+<p><img src="./creamos_3_carpetas_1b.jpg" alt="creamos las carpetas"></p>
+<h2 id="creamos-los-documentos-en-las-carpetas-martes-mi%C3%A9rcoles-y-jueves">Creamos los documentos en las carpetas Martes, Miércoles y Jueves</h2>
+<p><img src="./creamos_documentos_1c.jpg" alt="creamos los documentos"></p>
+<h2 id="modificamos-los-documentos">Modificamos los documentos</h2>
+<p><img src="./modificacion_martes_documento.jpg" alt="modificamos martes"></p>
+<p><img src="./modificaciones_documento_miercoles.jpg" alt="modificamos miercoles"></p>
+<p><img src="./modificaciones_documento_jueves.jpg" alt="modificamos Jueves"></p>
+<h2 id="a%C3%B1adimos-al-%C3%A1rea-de-preparaci%C3%B3n-los-tres-documentos-y-las-carpetas">Añadimos al área de preparación los tres documentos y las carpetas</h2>
+<p><img src="./añadimos_y_commiteamos_1d.jpg" alt="añadimos y commit"></p>
+<h2 id="comentario-del-primer-commit">Comentario del primer commit</h2>
+<p><img src="./comentario_del_primer_commit.jpg" alt="commit"></p>
+<h1 id="creamos-tres-ramas">Creamos tres ramas</h1>
+<h2 id="creamos-la-rama-desarrollo">Creamos la rama Desarrollo</h2>
+<p><img src="./creamos_rama_desarrollo.jpg" alt="creamos rama desarrollo"></p>
+<h2 id="creamos-la-carpeta-viernes-y-el-documento">Creamos la carpeta Viernes y el documento</h2>
+<p><img src="./creamos_carpeta_viernes_docuemento_yedicion.jpg" alt="creamos carpera viernes"></p>
+<h2 id="editamos-el-documento">Editamos el documento</h2>
+<p><img src="./edicion_Viernes_documento.jpg" alt="editamos el documento viernes"></p>
+<h2 id="primer-commit-de-la-rama-desarrollo">Primer commit de la rama Desarrollo</h2>
+<p><img src="./desarrollo_commit1.jpg" alt="primer commit rama desarrollo"></p>
+<h2 id="segundo-commit-desarrollo">Segundo commit Desarrollo</h2>
+<p><img src="./desarrollo_commit2.jpg" alt="segundo commit rama Desarrollo"></p>
+<h2 id="tercer-commit-desarrollo">Tercer commit Desarrollo</h2>
+<p><img src="./Desarrollo_commit3.jpg" alt="tercer commit rama desarrollo"></p>
+<h2 id="cuarto-commit-desarrollo">Cuarto commit Desarrollo</h2>
+<p><img src="./desarrollo_commit4.jpg" alt="cuarto commit rama desarrollo"></p>
+<h2 id="quinto-commit-desarrollo">Quinto commit Desarrollo</h2>
+<p><img src="./desarrollo_commit5.jpg" alt="quinto commit rama desarrollo"></p>
+<h2 id="merge-de-la-rama-desarrollo">Merge de la rama Desarrollo</h2>
+<p><img src="./merge_Desarrollo.jpg" alt="merge rama desarrollo"></p>
+<h2 id="creamos-la-rama-proceso-con-la-carpeta-s%C3%A1bado-y-el-documento-de-texto">Creamos la rama Proceso con la carpeta Sábado y el documento de texto</h2>
+<p><img src="./rama_proceso.jpg" alt="creamos rama proceso"></p>
+<h2 id="primera-edici%C3%B3n-del-documento-en-la-carpeta-s%C3%A1bado">Primera edición del documento en la carpeta Sábado</h2>
+<p><img src="./primera_edicion_del_docuementoSabado.jpg" alt="edicion de documento en Sabado"></p>
+<h2 id="primer-commit-en-la-rama-proceso">Primer commit en la rama Proceso</h2>
+<p><img src="./proceso_commit1.jpg" alt="primer"></p>
+<h2 id="segunda-modificaci%C3%B3n-del-documento-a%C3%B1adimos-y-hacemos-commit">Segunda modificación del documento, añadimos y hacemos commit</h2>
+<p><img src="./proceso_commit2.jpg" alt="segunda"></p>
+<h2 id="tercera-modificaci%C3%B3n-del-documento-a%C3%B1adimos-y-hacemos-commit">Tercera modificación del documento, añadimos y hacemos commit</h2>
+<p><img src="./proceso_commit3.jpg" alt="tercera"></p>
+<h2 id="cuarta-modificaci%C3%B3n-del-documento-a%C3%B1adimos-y-hacemos-commit">Cuarta modificación del documento, añadimos y hacemos commit</h2>
+<p><img src="./proceso_commit4.jpg" alt="cuarta"></p>
+<h2 id="quinta-modificaci%C3%B3n-del-documento-a%C3%B1adimos-y-hacemos-commit">Quinta modificación del documento, añadimos y hacemos commit</h2>
+<p><img src="./proceso_commit5.jpg" alt="quinta"></p>
+<h2 id="merge-proceso-con-la-rama-master">Merge Proceso con la rama Master</h2>
+<p><img src="./merge_proceso.jpg" alt="merge proceso"></p>
+<h2 id="creamos-la-rama-tabla-y-la-carpeta-lunes-con-un-documento">Creamos la rama Tabla y la carpeta Lunes con un documento</h2>
+<p><img src="./creamos_rama_tabla.jpg" alt="creamos rama Tabla"></p>
+<h2 id="primera-modificaci%C3%B3n-del-documento">Primera modificación del documento</h2>
+<p><img src="./rama_tabla1.jpg" alt="edicion del documento Tabla"></p>
+<h2 id="hacemos-el-primer-commit-de-la-rama-tabla">Hacemos el primer commit de la rama Tabla</h2>
+<p><img src="./tabla_commit1.jpg" alt="primer commit de la rama tabla"></p>
+<h2 id="hacemos-la-segunda-modificaci%C3%B3n-en-la-rama-tabla">Hacemos la segunda modificación en la rama Tabla</h2>
+<p><img src="./tabla_commit2.jpg" alt="segunda modificacion tabla"></p>
+<h2 id="hacemos-la-tercera-modificaci%C3%B3n-en-la-rama-tabla">Hacemos la tercera modificación en la rama Tabla</h2>
+<p><img src="./tabla_commit3.jpg" alt="tercera modificacion tabla"></p>
+<h2 id="hacemos-la-cuarta-modificaci%C3%B3n-en-la-rama-tabla">Hacemos la cuarta modificación en la rama Tabla</h2>
+<p><img src="./tabla_commit4.jpg" alt="cuarta modificacion tabla"></p>
+<h2 id="hacemos-la-segunda-modificaci%C3%B3n-en-la-rama-tabla">Hacemos la segunda modificación en la rama Tabla</h2>
+<p><img src="./tabla_commit5.jpg" alt="quinta modificacion tabla"></p>
+<h2 id="merge-con-la-rama-master">Merge con la rama master</h2>
+<p><img src="./merge_tabla.jpg" alt="merge tabla"></p>
+<h2 id="eliminamos-dos-ramas-auxiliares-y-vemos-que-ramas-nos-quedaron">Eliminamos dos ramas auxiliares y vemos que ramas nos quedaron</h2>
+<p><img src="./eliminamos_ramas_vemos_ramas.jpg" alt="eliminamos dos ramas"></p>
+
+</body>
+</html>
