@@ -8,7 +8,6 @@
 # Entre 6 y menor a 7 imprimimos D
 # Entre 0 y menor a 6 imprimimos F
 # De lo contrario el valor ingresado es incorrecto
-
 nota = None
 nota_numerica = float(input("Ingrese la nota que desea convertir: "))
 
