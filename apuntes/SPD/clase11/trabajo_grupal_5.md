@@ -1,4 +1,19 @@
-# Trabajo grupal 5
+# Trabajo grupal 5 de Sistema de procesamiento de datos
+
+## Grupo: MATE CODERS
+
+### Integrantes:
+
+- Facundo Martin Giacomozzi
+- Gabriel Romero
+- Lautaro Urquiza
+- Federico Pfund
+- Matias Canevaro
+- Eduardo Luis Gómez
+- Sabrina Mantero
+- Cinthia Fernanda Segovia
+- Martín Alejandro Torres
+- Agustin Rodriguez Alvarez
 
 ## Actividad n°1
 
