@@ -361,3 +361,108 @@ Escribí un programa que, dado un número entero positivo, calcule y muestre su
 factorial. El factorial de un número se obtiene multiplicando todos los números
 enteros positivos que hay entre el 1 y ese número. El factorial de 0 es 1. 
 """
+
+
+# num = int(input('Ingrese un número positivo: '))
+# factorial = 1
+# i = 1
+# while i <= num:
+#     factorial *= i
+#     i += 1
+# print(f'Factorial: {factorial}')
+
+""" Ejercicio 29
+Escribí un programa que permita al usuario ingresar 6 números enteros, que pueden ser positivos o negativos.
+Al final, mostrar la sumatoria de los números negativos y el promedio de los positivos. No olvides que 
+no es posible dividir por cero, por lo que es necesario evitar que el programa arroje un error si no se 
+ingresaron números positivos.
+"""
+
+# sum_ = 0
+# suma = 0
+# np = 0
+# for i in range(6):
+#     num = int(input('Número: '))
+#     if num < 0:
+#         sum_ += num
+#     if num > 0:
+#         suma += num
+#         np += 1
+# print(f'Sumatoria de los negativos: {sum_}')
+# if np > 0:
+#     promedio = suma / np
+#     print(f'Promedio de los positivos: {promedio}')
+
+""" Ejercicio 30
+Escribí un programa que permita al usuario ingresar una frase y luego un carácter
+(string de longitud 1) y luego muestre la frase ingresada, pero con todas las ocurrencias del carácter
+indicado por el usuario reemplazadas por "*".
+"""
+
+# frase = input('Frase: ')
+# carac = input('Carácter: ')
+# frase2 = ""
+# for letra in frase:
+#     if letra == carac:
+#         frase2 = frase2 + "*"
+#     else:
+#         frase2 = frase2 + letra
+# print(frase2)
+
+""" Ejercicio 31
+Escribí un programa que, dada una frase por el usuario, la muestre invertida, sin utilizar 
+una rebanada con paso negativo
+"""
+
+# frase = input('Frase: ')
+# frase2 = ''
+# for letra in frase:
+#     frase2 = letra + frase2
+# print(frase2)
+
+""" Ejercicio 32
+Escribí un programa que permita al usuario ingresar los montos de las compras de un cliente
+(se desconoce la cantidad de datos que cargará, la cual puede cambiar en cada ejecución),
+cortando el ingreso cuando el usuario el monto 0. Si ingresa un monto negativo, no se 
+debe procesar y se debe pedir que ingrese un nuevo monto. Al finalizar, informar el total a 
+pagar teniendo en cuenta que, si las ventas superan el monto total de 1000 se le debe aplicar 
+un 10% de descuento.
+"""
+
+# numero = int(input('Monto: '))
+# suma = 0
+# while numero != 0:
+#     if numero >= 0:
+#         suma += numero
+#     else:
+#         print('Monto no válido.')
+#     numero = int(input('Monto: '))
+#
+# if suma > 1000:
+#     suma *= 0.9
+# print(f'Monto total a pagar: {suma}')
+
+""" Ejercicio 33
+Escribí un programa que permita al usuario ingresar una cantidad de números
+positivos indefinida (la cantidad que ingresará no se conoce y puede cambiar en cada 
+ejecución), finalizando cuando ingresa el número 0 (que no tendrá en cuenta). Una vez terminada 
+la lectura de números, informar cuál fue el mayor de los números ingresados.
+"""
+
+# numero = int(input('Número: '))
+# max = -1
+# while numero != 0:
+#     if numero > 0:
+#         if numero > max:
+#             max = numero
+#     else:
+#         print('Número no valido.')
+#     numero = int(input('Número: '))
+# print(f'Mayor número ingresado: {max}')
+
+""" Ejercicio 34
+Escribí un programa que pregunte al usuario si desea analizar calificaciones de 
+alumnos y, sólo si responde 'S' comenzará el procesamiento de los datos, hasta que el usuario ingrese
+algo diferente de 'S'. Por cada alumno, permitir ingresar 
+"""
+
