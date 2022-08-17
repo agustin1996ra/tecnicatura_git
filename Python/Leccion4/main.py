@@ -79,3 +79,56 @@ Ejemplo de ejecución: 3,5,7,9
 """
 for i in range(3, 11, 2):
     print(i)
+
+# Tuplas
+""" 
+Los elementos de las tuplas son inmutables, no se pueden modificar 
+"""
+# Definimos una tupla
+cocina = ('cuchara', 'cuchillo', 'tenedor')
+print(cocina)
+
+# Para ver el número de elementos de una tupla
+print(len(cocina))
+
+# Acceder a un elemento, para esto utilizamos corchetes, no paréntesis
+print(cocina[0])
+
+# mostrar de manera inversa
+print(cocina[-1])
+
+# Acceder a un rango
+print(cocina[0:1])
+# ejemplo
+verduras = ('papa')  # esto no es una tupla es un tipo string
+verduras2 = ('papa',)  # esto si es una tupla. Ya que una tupla necesita aunque solo contenga un elemento, una coma
+print(verduras)
+print(verduras2)
+
+# Recorremos los elementos de la tupla
+for cocinar in cocina:
+    print(cocinar, end=' ')  # Dejamos de ejecutar el salto de linea al final de utilizar print, para usar un espacio
+
+# cocina[0] = 'plato' # esto no esta permitido con las tuplas
+
+# para poder modificarla es necesario convertirla
+# esto no es una buena practica
+cocinaLista = list(cocina)
+cocinaLista[0] = 'plato'
+cocina = tuple(cocinaLista)
+print('\n', cocina)
+
+del cocina
+# print(cocina) # nos generará un error porque la tupla cocina no existe más
+
+""" 
+Dada la siguiente tupla 
+tupla = (13, 1, 8, 3, 2, 5, 8) # definir la tupla
+Crear una lista que solo incluya los números menores a 5 e imprima por consola [1, 3, 2]
+"""
+tupla = (13, 1, 8, 3, 2, 5, 8)  # definimos la tupla
+lista = []
+for num in tupla:
+    if num < 5:
+        lista.append(num)
+print(lista)
