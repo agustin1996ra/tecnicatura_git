@@ -132,3 +132,136 @@ for num in tupla:
     if num < 5:
         lista.append(num)
 print(lista)
+
+# Tipo set
+planetas = {'Marte', 'Júpiter', 'Venus'}
+print(planetas)
+print(len(planetas))
+
+# Revisar si un elemento existe dentro de set
+print('Marte' in planetas)  # Recordar que python distingue entre mayúsculas y minúsculas y tildes
+
+# Agregar un elemento
+planetas.add('Tierra')  # add es una funcions
+print(planetas)
+planetas.add('Tierra')  # Esto no tendrá ningún tipo de efecto, ya que le elemento
+# 'Tierra' ya se encuentra dentro del set
+
+
+# Eliminar elemnetos, puede arrojar un error si el elemento no existe
+planetas.remove('Júpiter')
+print(planetas)
+
+# en cambio con discard no se generara un error
+planetas.discard('Tierra')
+print(planetas)
+planetas.discard('tierra')
+
+# Limpiar nuestro tipo set
+planetas.clear()
+print(planetas)
+
+# Para eliminar
+# del planetas
+print(planetas)  # esto debería dar un error porque ya no existe
+
+# Diccionarios
+diccionario = {
+    'IDE': 'Integrated Development Environment',
+    'POO': 'Programación Orientada a Objetos',
+    'SABD': 'Sistema de Administración de Base de Datos'
+}
+print(diccionario)
+
+# Determinar la cantidad de elementos
+print(len(diccionario))
+
+# Acceder a un elemento con la llave(key)
+print(diccionario['IDE'])  # nos mostrará el valor referenciado a esa llave
+
+# otra forma de recuperar un elemento
+print(diccionario.get('POO'))
+
+# Modificar los elementos
+diccionario['IDE'] = 'Entorno de Desarrollo Integrado'
+print(diccionario['IDE'])
+
+# Como recorrer los elementos
+for termino in diccionario:
+    print(termino)  # Esto nos permitirá acceder solo a las llaves
+
+# Necesitamos una función para recorrer un diccionario
+for termino, valor in diccionario.items():
+    print(termino, valor)
+
+
+# Otras maneras de acceder a un diccionario
+for termino in diccionario.keys():  # Usamos esta función para acceder a las llaves
+    print(termino)  # Muestra solo las llaves
+
+for valor in diccionario.values():  # usamos esta función para acceder a los valores
+    print(valor)
+
+# Comprobar la existencia de algun elemeno
+print('IDE' in diccionario)  # Devuelve un valor booleano de la comprobacion.
+
+# Agregar un elemento
+diccionario['PK'] = 'Llave primaria'
+print(diccionario)
+
+# Eliminar un elemento
+diccionario.pop('SABD')
+print(diccionario)
+
+# Vaciar un diccionario
+diccionario.clear()
+print(diccionario)
+
+# Eliminar un diccionario
+del diccionario
+
+# Concatenar listas
+lista1 = [1, 2, 3, 1]
+lista2 = [4, 5, 6, 1]
+lista3 = lista1 + lista2
+print(lista3)
+
+# Agregar varios elementos a una lista
+lista3.extend([7, 8, 9, 1])  # Función para agregar varios elementos a una lista
+print(lista3)
+
+# Averiguar el índice de un elemento de la lista
+print(lista3.index(5))  # Función para ubicar en que indice está el valor ingresado
+# print(lista3.index(0))  Esto dará un error por el elemento no ser parte de la lista
+
+# Como saber cuantos valores repetidos hay dentro de una lista
+print(lista3.count(1))  # Cuanta cuantos valores iguales hay dentro de la lista
+
+# Para poner nustra lista al reves
+lista3.reverse()
+print(lista3)
+
+# Para que una lista se multiplique repitiendo sus elementos
+lista = [1, 2, 3] * 2
+print(lista)
+lista3 = lista3 * 2
+print(lista3)
+
+# Métodos de ordenamiento
+lista3.sort()  # Ordena los elementos de forma ascendente
+print(lista3)
+
+lista3.sort(reverse=True)  # Ordena los elementos de forma descendente
+print(lista3)
+
+# Tuplas
+tupla = (4, 'Hola', 6.78, [1, 2, 78], 4, 'Hola')  # Puede tener diferentes tipos de elementos
+print(tupla)
+
+# Averiguar si un elemento se encuentra dento de una tupla
+print(4 in tupla)
+
+# Averiguar si un elemento se encuentra dentro de una tupla
+print(4 not in tupla)
+# Lo que podemos usar dentro de tuplas son: index, count, len
+# Las tuplas se pueden convertir en listas y las listas en tuplas
