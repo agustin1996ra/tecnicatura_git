@@ -310,56 +310,55 @@ y el 100.
 #     print(f'{s} + {i} = {suma}')
 
 """ Ejercicio 25
-Escribí un programa que, dado un número por el usuario, muestre todos sus 
-divisores positivos. Recordá que un divisor es aquel que divide al número
-de forma exacta (con resto 0).
+
+Escribí un programa que, dado un número por el usuario, muestre todos sus divisores positivos.
+Recordá que un divisor es aquel que divide al número de forma exacta (con resto 0).
 """
 
-# num = int(input('Número: '))
-# i = 1
-# print('Divisores:')
-# while i <= num:
+# num = int(input('Ingresá un número: '))
+# i = num
+# while i >= 1:
 #     if num % i == 0:
 #         print(i)
-#     i += 1
+#     i -= 1
 
 """ Ejercicio 26
-Escribí un programa que, dada una frase por el usuario, muestre la cantidad total
-de vocales (tanto mayúsculas como minúsculas) que contiene.
+Escribí un programa que, dada una frase por el usuario, muestre la cantidad total de vocales
+(tanto mayúsculas como minúsculas) que contiene.
 """
 
 # frase = input('Frase: ')
+# v = 'AEIOUaeiouáéíóú'
 # vocales = 0
-# v = 'AEIOUaeiou'
-#
-# for x in frase:
-#     if x in v:
+# for letra in frase:
+#     if letra in v:
 #         vocales += 1
-#
 # print(f'Vocales: {vocales}')
 
 """ Ejercicio 27
-Escribí un programa que muestre los primeros 10 números de la sucesión de
-Fibonacci. La sucesión comienza con los números 0 y 1 y, a partir de éstos,
-cada elemento es la suma de los dos números anteriores en la secuencia: 0, 1,
-2, 3, 5, 8, 13, 21, 34, 55...
+Escribí un programa que muestre los primeros 10 número de la sucesión de Fibonacci. La sucesión
+comienza con los números 0 y 1 y, a partir de éstos, cada elemento es la suma de los dos 
+números anteriores en la secuencia: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55...
 """
 
-fi_2 = 0
-fi_1 = 1
-fi = 0
-print(0)
-print(1)
-for i in range(10):
-    fi = fi_2 + fi_1
-    fi_2 = fi_1
-    fi_1 = fi
-    print(fi)
+# num = 10
+# i = 1
+# fi_2 = 0
+# fi_1 = 1
+# fi = 0
+# print(fi_2)
+# print(fi_1)
+# while i < num:
+#     fi = fi_1 + fi_2
+#     print(fi)
+#     fi_2 = fi_1
+#     fi_1 = fi
+#     i += 1
 
 """ Ejercicio 28
-Escribí un programa que, dado un número entero positivo, calcule y muestre su
-factorial. El factorial de un número se obtiene multiplicando todos los números
-enteros positivos que hay entre el 1 y ese número. El factorial de 0 es 1. 
+Escribí un programa que, dado un número entero positivo, calcule y muestre su factorial. El factorial
+de un número se obtiene multiplicando todos los números enteros positivos que hay entre el 1 y ese
+número. El factorial de 0 es 1.
 """
 
 
