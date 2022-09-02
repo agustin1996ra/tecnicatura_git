@@ -266,20 +266,113 @@ print(4 not in tupla)
 # Lo que podemos usar dentro de tuplas son: index, count, len
 # Las tuplas se pueden convertir en listas y las listas en tuplas
 
+# Repaso de set o conjunto
+# para definir un conjunto
+conjunto2 = set()
+conjunto1 = {'bye'}
+conjunto2.add(7)
+conjunto2.add('Hola')
+print(conjunto2)
+conjunto1.add('Hola')
+print(conjunto1)
+print(3 not in conjunto1)  # Preguntamos sie el número 3 NO está en el conjunto1
+
+# Como hacer la igualdad de dos conjuntos
+print(conjunto1 == conjunto2)
+
+# operaciones en conjuntos
+conjunto3 = conjunto1 | conjunto2  # Union de conjuntos
+print(conjunto3)
+
+conjunto3 = conjunto1 & conjunto2  # Que elemento tienen en común
+print(conjunto3)
+
+conjunto3 = conjunto1 - conjunto2  # Asigna el valor que esta en el conjunto1 y no en el conjunto2
+print(conjunto3)
+conjunto3 = conjunto2 - conjunto1  # Asigna el valor que esta en el conjunto2 y no en el conjunto1
+print(conjunto3)
+
+conjunto3 = conjunto1 ^ conjunto2  # Asigna los elementos que no comparten los conjuntos
+print(conjunto3)
+
+conjunto3 = conjunto1 | conjunto2
+print(conjunto1.issubset(conjunto3))  # Comprobar si el conjunto1 es subconjunto de conjunto3
+print(conjunto2.issubset(conjunto3))
+print(conjunto3.issubset(conjunto1))
+print(conjunto3.issubset(conjunto2))
+
+print(conjunto3.issuperset(conjunto1))
+print(conjunto3.issuperset(conjunto2))
+print(conjunto2.issuperset(conjunto3))
+
+# Como saber si ambos conjuntos son disconexos, eso es is no comparten elementos
+print(conjunto1.isdisjoint(conjunto2))  # Hay un elemento en común, entonces False
+
+# Convertir un conjunto a totalmente inmutable
+conjunto1 = frozenset  # esto hace que el conjunto sea totalmente inmutable
+# No se puede agregar, ni modificar ni eliminar elemento del conjunto
+
+# Repaso Diccionarios
+diccionarioNuevo = {'Azul': 'Blue', 'Rojo': 'Red', 'Verde': 'Green', 'Amarillo': 'Yellow'}
+print(diccionarioNuevo)
+
+# Como eliminar
+del (diccionarioNuevo['Azul'])
+print(diccionarioNuevo)
+
+# Los diccionarios pueden almacenar diferentes tipos de datos
+diccionario2 = {'Ariel': {'Edad': 40, 'Altura': 1.83},
+                'Osvaldo': [45, 1.85],
+                'Natalia': [35, 1.67]}
+
+
 seleccionArgentina = {
     10: {'Nombre': 'Lionel Messi', 'Edad': 35, 'Altura': 1.70, 'Precio': '50 Millones', 'Posicion': 'Extremo Derecho'},
     11: {'Nombre': 'Angel Di Maria', 'Edad': 34, 'Altura': 1.80, 'Precio': '12 Millones', 'Posicion': 'Extremo Derecho'},
     24: {'Nombre': 'Paulo Dybala', 'Edad': 28, 'Altura': 1.77, 'Precio': '35 Millones', 'Posicion': 'Media Punta'},
-    19: {'Nombre': 'Nicolás Otamendi', 'Edad': 34, 'Altura': 1.83, 'Precio': '3.5 Millones',
-         'Posicion': 'Defensa Central'},
+    19: {'Nombre': 'Nicolás Otamendi', 'Edad': 34, 'Altura': 1.83, 'Precio': '3.5 Millones', 'Posicion': 'Defensa Central'},
     1: {'Nombre': 'Franco Armani', 'Edad': 35, 'Altura': 1.89, 'Precio': '3.5 Millones', 'Posicion': 'Portero'},
     2: {'Nombre': 'Juan Foyth', 'Edad': 24, 'Altura': 1.87, 'Precio': '25 Millones', 'Posicion': 'Lateral Derecho'},
-    3: {'Nombre': 'Nicolas Tagliafico', 'Edad': 30, 'Altura': 1.72, 'Precio': '11 Millones',
-        'Posicion': 'Lateral Izquierdo'},
+    3: {'Nombre': 'Nicolas Tagliafico', 'Edad': 30, 'Altura': 1.72, 'Precio': '11 Millones', 'Posicion': 'Lateral Izquierdo'},
     4: {'Nombre': 'Gonzalo Montiel', 'Edad': 25, 'Altura': 1.76, 'Precio': '14 millones', 'Posicion': 'Lateral Derecho'},
-    5: {'Nombre': 'Alexis Mac Alister', 'Edad': 23, 'Altura': 1.74, 'Precio': '16 Millones',
-        'Posicion': 'Mediocentro Ofensivo'}
-
+    5: {'Nombre': 'Alexis Mac Alister', 'Edad': 23, 'Altura': 1.74, 'Precio': '16 Millones', 'Posicion': 'Mediocentro Ofensivo'}
 }
-print(seleccionArgentina)
-print(seleccionArgentina[4])
+
+for llave, valor in seleccionArgentina.items():
+    print(llave, valor)
+
+# Pilas usando listas
+pila = [1, 2, 3]
+print(pila)
+
+# Agregar elementos a la pila por el final
+pila.append(4)
+pila.append(5)
+print(pila)
+
+# Sacamos elementos desde el final
+elementoBorrado = pila.pop()  # Quita el último elemento y lo guarda en la variable
+print(f'El elemento borrado de la lista {elementoBorrado}')
+print(f'Nuestra lista quedo asi {pila}')
+
+# Colas con listas
+# Estructura de datos de tipos fifo(first input / first output)
+cola = ['Ariel', 'Osvaldo', 'Liliana', 'Pilar']
+print(cola)
+
+# Agregamos elementos al final de la cola
+cola.append('Natalia')
+cola.append('Jose')
+print(cola)
+
+# Sacamos elementos de la cola
+seRetira = cola.pop(0)
+print(f'Es atendido {seRetira}')
+
+n = len(cola)
+for i in range(n):
+    seRetira = cola.pop(0)
+    print(f'Es atendido {seRetira}')
+
+
+
