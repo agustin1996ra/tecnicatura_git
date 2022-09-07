@@ -16,5 +16,6 @@ seleccionArgentina = {
     5: {'Nombre': 'Alexis Mac Alister', 'Edad': 23, 'Altura': 1.74, 'Precio': '16 Millones', 'Posicion': 'Mediocentro Ofensivo'}
 }
 
-print(seleccionArgentina)
-print(seleccionArgentina[4]['Nombre'] and seleccionArgentina[5]['Nombre'])
+for key, value in seleccionArgentina.items():
+    print(f'camiseta: {key}  {value}')
+

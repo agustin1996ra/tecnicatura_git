@@ -121,7 +121,7 @@ print('\n', cocina)
 del cocina
 # print(cocina) # nos generará un error porque la tupla cocina no existe más
 
-""" 
+""" Ejercicio 4
 Dada la siguiente tupla 
 tupla = (13, 1, 8, 3, 2, 5, 8) # definir la tupla
 Crear una lista que solo incluya los números menores a 5 e imprima por consola [1, 3, 2]
@@ -296,6 +296,7 @@ conjunto3 = conjunto1 ^ conjunto2  # Asigna los elementos que no comparten los c
 print(conjunto3)
 
 conjunto3 = conjunto1 | conjunto2
+
 print(conjunto1.issubset(conjunto3))  # Comprobar si el conjunto1 es subconjunto de conjunto3
 print(conjunto2.issubset(conjunto3))
 print(conjunto3.issubset(conjunto1))
@@ -325,7 +326,13 @@ diccionario2 = {'Ariel': {'Edad': 40, 'Altura': 1.83},
                 'Osvaldo': [45, 1.85],
                 'Natalia': [35, 1.67]}
 
-
+""" Ejercicio 5
+La tarea consiste en ingresar elementos al diccionario llamado
+ seleccionArgentina, lo elementos a ingresar deben ser como mínimo 4,
+ estos elementos son los jugadores con su número de camiseta, nombre,
+ apellido, edad, altura, precio y posición de juego, por supuesto ver
+ el video anterior
+"""
 seleccionArgentina = {
     10: {'Nombre': 'Lionel Messi', 'Edad': 35, 'Altura': 1.70, 'Precio': '50 Millones', 'Posicion': 'Extremo Derecho'},
     11: {'Nombre': 'Angel Di Maria', 'Edad': 34, 'Altura': 1.80, 'Precio': '12 Millones', 'Posicion': 'Extremo Derecho'},
@@ -373,6 +380,4 @@ n = len(cola)
 for i in range(n):
     seRetira = cola.pop(0)
     print(f'Es atendido {seRetira}')
-
-
 

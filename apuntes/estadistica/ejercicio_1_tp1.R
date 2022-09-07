@@ -42,3 +42,4 @@ media
 moda <- max(fabs)
 moda
 barplot(fabs, ylab="Frecuencias absolutas", main="Notas")
+
