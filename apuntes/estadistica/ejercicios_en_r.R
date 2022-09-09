@@ -70,3 +70,13 @@ varianza <- var(autos_vendidos)
 # el valor de varianza es
 varianza
 
+# 1.6
+# La siguiente distribución de frecuencias corresponde al número
+# de litros de cerveza consumidos por cada una de 50
+# familias en una semana determinada.
+
+# Este vector contiene los litros de cerveza de la escala
+nombres <- c(0, 1, 2, 3, 4, 5, 6, 7)
+faa <- c(6, 10, 16, 23, 33, 40, 46, 50)
+fabs <-
+
