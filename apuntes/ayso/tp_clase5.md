@@ -42,3 +42,4 @@ Version 1.0 (características de PC IBM)
 ## 3. Que similitud encontraste con **GitBash**. Menciona algunos ejemplos, puedes acompañar de capturas o imágenes.
 
 Por empezar tanto MS-DOS como GitBash, es software que no posee interfaz gráfica, es decir que son de interfaz textual, y el usuario deberá ingresar los comandos por teclado para realizar sus actividades.
+
