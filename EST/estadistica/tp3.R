@@ -24,3 +24,5 @@ mediana
 desviacion_estandar <- var(modelo) ^ 0.5
 desviacion_estandar
 
+
+
