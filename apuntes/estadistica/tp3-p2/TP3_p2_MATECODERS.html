@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TP3_p2_MATECODERS.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="tp-3-parte-2">Tp 3 parte 2</h1>
+<h2 id="grupo-mate-coders">Grupo: MATE CODERS</h2>
+<h3 id="integrantes">Integrantes:</h3>
+<ul>
+<li>Facundo Martin Giacomozzi</li>
+<li>Gabriel Romero</li>
+<li>Lautaro Urquiza</li>
+<li>Federico Pfund</li>
+<li>Matias Canevaro</li>
+<li>Eduardo Luis Gómez</li>
+<li>Sabrina Mantero</li>
+<li>Cinthia Fernanda Segovia</li>
+<li>Martín Alejandro Torres</li>
+<li>Agustin Rodriguez Alvarez</li>
+</ul>
+<h2 id="consignas">Consignas</h2>
+<h3 id="con-los-ejemplos-del-practico-anterior-y-utilizando-ggplot">Con los ejemplos del practico anterior y utilizando <strong>GGPLOT</strong>:</h3>
+<ol>
+<li>Graficar :
+<ol>
+<li><code>barplot</code></li>
+<li><code>barplot</code> en colores</li>
+<li><code>barplot</code> con orientaciones cambiadas</li>
+<li>con colores distintos para cada variable.</li>
+</ol>
+</li>
+<li>Histograma:
+<ol>
+<li>histograma en la cual cada columna tenga un rango de 0 a 2</li>
+<li>hacer un histograma haciendo cortes</li>
+<li>hacer un histograma usando la variable carat</li>
+<li>hacer un histograma usando la variable cut</li>
+<li>hacer un histograma usando la variable cut y color.</li>
+</ol>
+</li>
+<li>Gráficos de dispersión:
+<ol>
+<li>gráfico de puntos.</li>
+</ol>
+</li>
+</ol>
+<h1 id="resoluci%C3%B3n">Resolución</h1>
+<p>Empezamos importando como objeto <code>data</code>, la base de datos de el tp anterior, y también las librerías que vamos a utilizar.</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">library</span>(readxl)
+<span class="hljs-keyword">library</span>(ggplot2)
+base_de_datos &lt;- read_excel(<span class="hljs-string">"../base_de_datos_tp3.xlsx"</span>)
+base_de_datos
+</div></code></pre>
+<p><img src="./img/1_baseDeDatos.jpg" alt="mostramos la base de datos por consola"></p>
+<h2 id="ejercicio-11-gr%C3%A1fico-barplot-variable-modelo-de-auto">Ejercicio 1.1: Gráfico <code>barplot</code> variable modelo de auto</h2>
+<pre class="hljs"><code><div>ggplot(base_de_datos, aes(x = modelo)) +
+  geom_bar() +
+  ylab(<span class="hljs-string">"Frecuencias absolutas"</span>) +
+  ggtitle(<span class="hljs-string">"Grafico de barras"</span>)
+</div></code></pre>
+<p><img src="./img/2_ej1_1.jpeg" alt="grafico de barras"></p>
+<h2 id="ejercicio-12-barplot-con-colores">Ejercicio 1.2: <code>barplot</code> con colores</h2>
+<pre class="hljs"><code><div>ggplot(base_de_datos, aes(x = modelo)) +
+  geom_bar(color = <span class="hljs-string">"blue"</span>, fill = <span class="hljs-string">"red"</span>) +
+  ylab(<span class="hljs-string">"Frecuencias absolutas"</span>) +
+  ggtitle(<span class="hljs-string">"Grafico de barras"</span>)
+</div></code></pre>
+<p><img src="./img/3_ej1_2.jpeg" alt="grafico de barras con colores"></p>
+<h2 id="ejercicio-13-barplot-con-las-coordenadas-invertidas">Ejercicio 1.3: <code>barplot</code> con las coordenadas invertidas</h2>
+<pre class="hljs"><code><div>ggplot(base_de_datos, aes(x = modelo)) +
+  geom_bar(color = <span class="hljs-string">"blue"</span>, fill = <span class="hljs-string">"red"</span>) +
+  ylab(<span class="hljs-string">"Frecuencias absolutas"</span>) +
+  ggtitle(<span class="hljs-string">"Grafico de barras"</span>) +
+  coord_flip()
+</div></code></pre>
+<p><img src="./img/4_ej_1_3.jpeg" alt="grafico de barras invertido"></p>
+<h2 id="ejercicio-14-barplot-por-distintos-colores">Ejercicio 1.4: <code>barplot</code> por distintos colores</h2>
+<pre class="hljs"><code><div>ggplot(base_de_datos, aes(x = modelo, fill = as.factor(modelo))) +
+  geom_bar() +
+  ylab(<span class="hljs-string">"Frecuencias absolutas"</span>) +
+  ggtitle(<span class="hljs-string">"Grafico de barras"</span>) +
+  labs(fill = <span class="hljs-string">"modelo"</span>)
+</div></code></pre>
+<p><img src="./img/5_ej_1_4.jpeg" alt="grafico barras distintos colores"></p>
+<h2 id="ejercicio-21-histograma-con-rango-0-a-2">Ejercicio 2.1: Histograma con rango 0 a 2</h2>
+<pre class="hljs"><code><div>ggplot(base_de_datos) +
+  geom_histogram(binwidth = <span class="hljs-number">2</span>, aes(x = modelo), fill = <span class="hljs-string">"steelblue"</span>) +
+  xlab(<span class="hljs-string">"Modelo"</span>) +
+  ylab(<span class="hljs-string">"Frecuencias"</span>) +
+  ggtitle(<span class="hljs-string">"Histograma con rango 0 a 2"</span>) +
+  theme_minimal()
+</div></code></pre>
+<p><img src="./img/6_ej_2_1.jpeg" alt="histograma"></p>
+<h2 id="ejercicio-22-histograma-usando-cortes">Ejercicio 2.2: Histograma usando cortes</h2>
+<pre class="hljs"><code><div>ggplot(base_de_datos) +
+  geom_histogram(binwidth = <span class="hljs-number">1</span>, aes(x = modelo, fill = marca)) +
+  xlab(<span class="hljs-string">"Modelo"</span>) +
+  ylab(<span class="hljs-string">"Frecuencias"</span>) +
+  ggtitle(<span class="hljs-string">"Histograma con cortes"</span>) +
+  theme_minimal()
+</div></code></pre>
+<p><img src="./img/7_ej_2_2.jpeg" alt="histograma con cortes"></p>
+<blockquote>
+<p>Aclaración: en este ejercicio no entendimos muy bien como realizar el histograma con cortes. Supusimos que se refería a este tipo de histograma. Donde se interpola los datos de dos variables en las columnas del histograma.</p>
+</blockquote>
+<h2 id="ejercicio-b3-histograma-usando-la-variable-cilindrada">Ejercicio b.3: Histograma usando la variable cilindrada</h2>
+<pre class="hljs"><code><div>ggplot(base_de_datos) +
+  geom_histogram(binwidth = <span class="hljs-number">0.1</span>, aes(x = cilindrada)) +
+  xlab(<span class="hljs-string">"Cilindrada"</span>) +
+  ylab(<span class="hljs-string">"Frecuencia"</span>) +
+  ggtitle(<span class="hljs-string">"Histograma usando la variable cilindrada"</span>) +
+  theme_minimal()
+</div></code></pre>
+<p><img src="./img/8_ej_2_3.jpeg" alt="histograma con otra variable"></p>
+<blockquote>
+<p>Aclaración: En este ejercicio entendimos que teniamos que usar una variable de nuestra base de datos, parecida a la variable <code>carat</code> de la base de datos <code>diamonds</code>. Por eso seleccionamos la única variable que teníamos con decimales.</p>
+</blockquote>
+<h2 id="ejercicio-24-histograma-usando-la-variable-cut">Ejercicio 2.4: histograma usando la variable cut</h2>
+<pre class="hljs"><code><div>ggplot(diamonds) +
+  geom_histogram(binwidth = <span class="hljs-number">0.1</span>, aes(x = cut)) +
+  xlab(<span class="hljs-string">"Cilindrada"</span>) +
+  ylab(<span class="hljs-string">"Frecuencia"</span>) +
+  ggtitle(<span class="hljs-string">"Histograma usando la variable cut"</span>) +
+  theme_minimal()
+</div></code></pre>
+<p><img src="./img/10ej2_4.jpg" alt="error"></p>
+<blockquote>
+<p>Aclaración: en este ejercicio tuvimos dudas interpretando la consigna. Ya que hacer un histograma con la variable <code>cut</code> de la base <code>diamonds</code> no fue posible, por ser <code>cut</code> una variable cualitativa discreta.</p>
+</blockquote>
+<h2 id="ejercicio-3-gr%C3%A1fico-de-dispersi%C3%B3n-de-puntos">Ejercicio 3: Gráfico de dispersión de puntos</h2>
+<pre class="hljs"><code><div>ggplot(base_de_datos, aes(marca, modelo)) +
+  geom_point() +
+  xlab(<span class="hljs-string">"Marca"</span>) +
+  ylab(<span class="hljs-string">"Modelo"</span>) +
+  ggtitle(<span class="hljs-string">"Grafico de dispersion de puntos"</span>) +
+  theme_minimal()  
+</div></code></pre>
+<p><img src="./img/11_ej_3.jpeg" alt="grafico de dispersión"></p>
+
+</body>
+</html>
