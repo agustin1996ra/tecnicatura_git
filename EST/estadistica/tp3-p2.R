@@ -57,6 +57,16 @@ ggplot(base_de_datos) +
   ggtitle("Histograma usando la variable cilindrada") +
   theme_minimal()
 
+# Ejercicio b.4: histograma usando la variable cut
+base <- diamonds
+
+ggplot(diamonds) +
+  geom_histogram(binwidth = 0.1, aes(x = cut)) +
+  xlab("Cilindrada") +
+  ylab("Frecuencia") +
+  ggtitle("Histograma usando la variable cut") +
+  theme_minimal()
+
 # Ejercicio c: Grafico de dispersion de puntos
 ggplot(base_de_datos, aes(marca, modelo)) +
   geom_point() +
