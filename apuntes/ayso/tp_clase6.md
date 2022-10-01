@@ -55,5 +55,37 @@ Requisitos mínimos para sistemas sin interfaz gráfica:
 - Procesador: Pentium 4 a 1GHz
 - Memoria RAM: 256Mb
 - Disco Duro: 2Gb
+
 #### Versiones reducidas
-Estas versiones pueden ser instaladas con un mínimo de 20Mb de RAM en arquitecturas de procesador s390 y 60Mb en arquitecturas de amd64. Lo 
+Estas versiones pueden ser instaladas con un mínimo de 20Mb de RAM en arquitecturas de procesador s390 y 60Mb en arquitecturas de amd64. A la hora de calcular el espacio necesario para el disco duro, tenemos que ir teniendo en cuenta que partes del sistema vamos a utilizar y las aplicaciones que necesitamos instalar.
+
+### Ubuntu 22.04 version de escritorio
+
+Requisitos mínimos de hardware:
+- Procesador: 2GHz dual core
+- Memoria RAM: 4Gb
+- Disco Duro: 25Gb (Puede ser un LiveCD)
+- Salida de video: Puerto VGA 1024x768 resolución
+- Un puerto USB o una Lectora de CD/DVD
+
+Datos obtenidos de: []
+### Fedora 36
+
+Requisitos recomendados de hardware:
+- Procesador: 2GHz quad core
+- Memoria RAM: 4Gb
+- Disco Duro: 20Gb
+
+Requisitos mínimos de hardware:
+- Procesador: 2GHz dual core
+- Memoria RAM: 2Gb
+- Disco Duro: 15Gb
+
+Datos obtenidos de: [Fedora Project - Hardware Overview](https://docs.fedoraproject.org/en-US/fedora/latest/release-notes/welcome/Hardware_Overview/)
+
+## 2. Funcionamiento del Kernel LINUX
+
+
+
+
+
