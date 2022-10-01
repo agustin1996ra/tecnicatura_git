@@ -85,7 +85,28 @@ Datos obtenidos de: [Fedora Project - Hardware Overview](https://docs.fedoraproj
 
 ## 2. Funcionamiento del Kernel LINUX
 
+El kernel de Linux es el elemento principal de los sistemas operativos Linux, y es la interfaz o conexión fundamental entre el hardware de una computadora y sus procesos. Los comunica entre sí y gestiona los recursos de la manera más eficiente posible.
+
+### El kernel cumple cuatro funciones:
+1. Gestión de la memoria: supervisa cuánta memoria se utiliza para almacenar qué tipo de elementos, así como el lugar en que los guarda.
+
+2. Gestión de los procesos: determina qué procesos pueden usar la unidad central de procesamiento (CPU), cuándo y durante cuánto tiempo.
+
+3. Controladores de dispositivos: actúa como mediador o intérprete entre el hardware y los procesos.
+
+4. Seguridad y llamadas al sistema: recibe solicitudes de servicio por parte de los procesos.
+
+
+### Arquitectura simplificada y ubicación del kernel
+
+Para darle un contexto al kernel, imagínese que el equipo Linux tiene tres capas:
+
+1. El hardware: Se trata del equipo físico, el cimiento o la base del sistema, que esá compuesto de la memoria (RAM) y el procesador o la unidad central de procesamiento (CPU), además de los dispositivos de entrada y salida (E/S), el almacenamiento, la conexión de red y los gráficos. La CPU realiza los cálculos y también accede a la memoria y la modifica.
+
+2. El kernel de Linux: el corazón del SO. Se encuentra justo en el medio y se trata del software que reside en la memoria e indica qué debe hacer la CPU.
+
+3. Procesos del usuario: son los programas en funcionamiento que gestiona el kernel y, en conjunto, conforman el espacio del usuario. También se les llama procesos simplemente. El kernel también permite que los procesos y los servidores se comuniquen entre sí, lo cual se conoce como comunicación entre procesos (IPC).
 
 
 
-
+Información obtenida de: [RedHat - ¿Qué es el kernel de Linux?](https://www.redhat.com/es/topics/linux/what-is-the-linux-kernel)
