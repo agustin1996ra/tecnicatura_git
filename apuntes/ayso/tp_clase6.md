@@ -86,8 +86,6 @@ Datos obtenidos de: [Fedora Project - Hardware Overview](https://docs.fedoraproj
 ## 2. Funcionamiento del Kernel LINUX
 
 
-el funcionamiento del kernel de linux
 
-asdjhajshdkjahskdujh
 
 
