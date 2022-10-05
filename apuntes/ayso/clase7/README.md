@@ -31,4 +31,48 @@ Es fácil de dominar para el público en general y cuenta con una gran cantidad 
 
 En su corta, pero exitosa trayectoria, ha desarrollado muchas versiones distintas. En orden cronológico, son:
 - Banana Bread 
+- Cupcake
+- Donut
+- Eclair
+- Froyo
+- Gingerbread
+- Honeycom
+- Ice Cream Sandwich
+- Jelly Bean
+- KitKat
+- Lollipop
+- Marshmallow
+- Nougat
+- Oreo
+- Pie
+- 10
+- 11
+
+### Ventajas
+
+- Es codigo libre, así que cualquier persona con los conocimientos suficientes puede crear una aplicación.
+
+- Ofrece libertad al propietario del dispositivo para instalar la aplicación que desee, ya sea desde Play Store o a través de un archivo ejecutable.
+
+- La interfaz es altamente personalizable, lo que significa que puede adaptarse a las preferencias de cada usuario.
+
+### Desventajas 
+
+- Acceder a las actualizaciones del sistema operativo depende del fabricante, lo que impide a muchos usuarios disfrutar del software más reciente.
+
+- La gran apertura que lo expone más que otros SO a los ciberataques.
+
+- Al no verificar cuidadosamente la calidad del software de terceros, algunas de las aplicaciones de la tienda en línea dejan muchos que desear.
+
+### Ultima versión
+
+Version 11
+
+> Hasta la fecha la versión más utilizada sigue siendo Android 10
+
+# Actividad:
+
+1. Realizar cuestionario para la asistencia de 19 a 21hs
+2. En grupo realizar la siguiente actividad:
+    1. Realizar un cuadro comparativo entre las características y requerimientos del Sistema Android 10 y 11.
 
