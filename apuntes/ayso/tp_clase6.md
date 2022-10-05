@@ -108,5 +108,6 @@ Para darle un contexto al kernel, imagínese que el equipo Linux tiene tres capa
 3. Procesos del usuario: son los programas en funcionamiento que gestiona el kernel y, en conjunto, conforman el espacio del usuario. También se les llama procesos simplemente. El kernel también permite que los procesos y los servidores se comuniquen entre sí, lo cual se conoce como comunicación entre procesos (IPC).
 
 
+![posiciondelkernel](./img/clase6/arquitectura.jpg)
 
 Información obtenida de: [RedHat - ¿Qué es el kernel de Linux?](https://www.redhat.com/es/topics/linux/what-is-the-linux-kernel)
