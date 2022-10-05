@@ -111,3 +111,23 @@ Para darle un contexto al kernel, imagínese que el equipo Linux tiene tres capa
 ![posiciondelkernel](./img/clase6/arquitectura.jpg)
 
 Información obtenida de: [RedHat - ¿Qué es el kernel de Linux?](https://www.redhat.com/es/topics/linux/what-is-the-linux-kernel)
+
+
+## 3. Realizar una linea de tiempo de LINUX con el año y las actualizaciones que se fueron realizando.
+
+## Antecedentes
+- 1977: La universidad de Berkeley California desarrolla BSD (Berkeley Software Distribution). Dado que BSD contenia código Unix, propiedad de AT&T, este proyecto fue demandado y se interrumpió su desarrollo.
+
+## Inicios (etapa GNU)
+
+- 1983: Richard Stallman inició el Proyecto GNU(acrónimo recursivo: Gnu Not Unix) como un SO similar y compatible con Unix. Pero de código libre.
+
+- 1985: Richard Stallman creó la Fundación del Software Libre (FSF) y desarrollo la Licencia pública general de GNU (GNU GPL), como marco legal para distribuir libremente el software.
+
+- 1990: Esta avanzado del desarrollo del proyecto GNU, pero surge la necesidad de desarrollar el nucleo, para terminar el SO.
+
+## Etapa GNU / Linux
+
+- 1991: Linus Torvalds comenzó un proyecto que luego seria el nucleo Linux (kernel).
+
+
