@@ -85,7 +85,7 @@ Datos obtenidos de: [Fedora Project - Hardware Overview](https://docs.fedoraproj
 
 ## 2. Funcionamiento del Kernel LINUX
 
-El kernel de Linux es el elemento principal de los sistemas operativos Linux, y es la interfaz o conexión fundamental entre el hardware de una computadora y sus procesos. Los comunica entre sí y gestiona los recursos de la manera más eficiente posible.
+El kernel de Linux es el elemento principal de los sistemas operativos GNU/Linux, y es la interfaz o conexión fundamental entre el hardware de una computadora y sus procesos. Los comunica entre sí y gestiona los recursos de la manera más eficiente posible.
 
 ### El kernel cumple cuatro funciones:
 1. Gestión de la memoria: supervisa cuánta memoria se utiliza para almacenar qué tipo de elementos, así como el lugar en que los guarda.
@@ -108,26 +108,12 @@ Para darle un contexto al kernel, imagínese que el equipo Linux tiene tres capa
 3. Procesos del usuario: son los programas en funcionamiento que gestiona el kernel y, en conjunto, conforman el espacio del usuario. También se les llama procesos simplemente. El kernel también permite que los procesos y los servidores se comuniquen entre sí, lo cual se conoce como comunicación entre procesos (IPC).
 
 
-![posiciondelkernel](./img/clase6/arquitectura.jpg)
+![posiciondelkernel](./img/clase6/3.png)
 
 Información obtenida de: [RedHat - ¿Qué es el kernel de Linux?](https://www.redhat.com/es/topics/linux/what-is-the-linux-kernel)
 
 
 ## 3. Realizar una linea de tiempo de LINUX con el año y las actualizaciones que se fueron realizando.
 
-## Antecedentes
-- 1977: La universidad de Berkeley California desarrolla BSD (Berkeley Software Distribution). Dado que BSD contenia código Unix, propiedad de AT&T, este proyecto fue demandado y se interrumpió su desarrollo.
-
-## Inicios (etapa GNU)
-
-- 1983: Richard Stallman inició el Proyecto GNU(acrónimo recursivo: Gnu Not Unix) como un SO similar y compatible con Unix. Pero de código libre.
-
-- 1985: Richard Stallman creó la Fundación del Software Libre (FSF) y desarrollo la Licencia pública general de GNU (GNU GPL), como marco legal para distribuir libremente el software.
-
-- 1990: Esta avanzado del desarrollo del proyecto GNU, pero surge la necesidad de desarrollar el nucleo, para terminar el SO.
-
-## Etapa GNU / Linux
-
-- 1991: Linus Torvalds comenzó un proyecto que luego seria el nucleo Linux (kernel).
-
-
+![lineadeltiempo1](./img/clase6/1.jpg)
+![lineadeltimepo2](./img/clase6/2.jpg)
