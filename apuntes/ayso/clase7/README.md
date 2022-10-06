@@ -60,7 +60,7 @@ En su corta, pero exitosa trayectoria, ha desarrollado muchas versiones distinta
 
 - Acceder a las actualizaciones del sistema operativo depende del fabricante, lo que impide a muchos usuarios disfrutar del software más reciente.
 
-- La gran apertura que lo expone más que otros SO a los ciberataques.
+- La gran apertura que lo expone más que otros SO a los cyber ataques.
 
 - Al no verificar cuidadosamente la calidad del software de terceros, algunas de las aplicaciones de la tienda en línea dejan muchos que desear.
 
