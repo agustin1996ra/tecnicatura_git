@@ -19,7 +19,7 @@ En "Cambio en la visibilidad de los repositorios", anula la selección de permit
 Haga click en **Save** (Guardar).
 
 ### Pull
-- Actualiza su rama de trabajo local actual y todas las rmas de seguimiento remoto. Es una buena idea correr regularmente en las sucursales en las que está trabajando localmente.
+- Actualiza su rama de trabajo local actual y todas las ramas de seguimiento remoto. Es una buena idea correr regularmente en las sucursales en las que está trabajando localmente.
 - Sin, (o el efecto de ello), su sucursal local no tendría ninguna de las actualizaciones que están presentes en el control remoto.
 
 #### ¿Cómo funciona?
@@ -43,3 +43,20 @@ Es una de las operaciones remotas dentro de Git. Sin ejecutarse, su repositorio 
 ## Github Desktop
 
 ### Crear un repositorio nuevo o clonar un repositorio: 
+### Creamos un nuevo repositorio
+### Creamos una nueva rama
+### Les permite publicar los cambios en la nube de GitHub
+## Actividad n°2
+### Desde GitHub Desktop
+1. Crear un repositorio nuevo
+2. Generar dos ramas
+
+### Añadimos cambios al archivo README y commiteamos cambios
+### En historial nos apareceran los commit que vamos realizando
+## Actividad n°3
+1. Generar cambios en el archivo readme creado y realizar un commit
+
+### Cómo publicar tu repositorio?
+Hasta ahora solo hemos registrado nuestros cambios de manera local. Aunque podríamos estar satisfechos con guardarlos en nuestro ordenador (es importante conservar copias), seguramente queremos subir los archivos a nuestro repositorio de GitHub para hacerlos públicos o bien, simplemente, para tener una copia que no esté alojada en nuestro ordenador. El proceso con GitHub Desktop es muy sencillo y rápido. En GitHub Desktop 'publicas' repositorios; es decir, los envías `push` desde tu ordenador a la web de GitHub. Durante este proceso también creas un repositorio remoto.
+
+Seleccionamos publicar repositorio, nos enviará un código a nuestra app instalada en nuestro celular nos pedirá confirmar el numero de nuestro celular, ingresaremos el número y a continuación se subirán los cambios hechos en nuestro repositorio local al repositorio remoto.

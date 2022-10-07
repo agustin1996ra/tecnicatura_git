@@ -8,6 +8,7 @@ public class PruebaAritmetica {
         aritmetica1.a = 3;
         aritmetica1.b = 7;
         aritmetica1.sumarNumeros();
+        var hola = 2;
         
         int resultado = aritmetica1.sumarConRetorno();
         System.out.println("resultado = " + resultado);
@@ -15,6 +16,6 @@ public class PruebaAritmetica {
         resultado = aritmetica1.sumarConArgumentos(12, 26);
         System.out.println("Resultado usando argumentos = " + resultado);
         
-        
+        System.out.println(hola);
     }
 }
