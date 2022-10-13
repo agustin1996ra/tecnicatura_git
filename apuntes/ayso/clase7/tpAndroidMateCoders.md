@@ -1,487 +1,67 @@
 ### Android 10
-Handheld device implementations:
-[ 7.1 .1.1/H-0-1] MUST have at least one Android-compatible display at least 2.5 inches in
-physical diagonal size and each Android-compatible display MUST meet all requirements
-described on this document.
-[ 7.1 .1.3/H-SR] Are STRONGLY RECOMMENDED to provide users an affordance to
-change the display size (screen density).
-If Handheld device implementations claim support for high dynamic range displays through
-Configuration.isScreenHdr() , they:
-[ 7.1 .4.5/H-1-1] MUST advertise support for the EGL_EXT_gl_colorspace_bt2020_pq ,
-EGL_EXT_surface_SMPTE2086_metadata , EGL_EXT_surface_CTA861_3_metadata ,
-VK_EXT_swapchain_colorspace , and VK_EXT_hdr_metadata extensions.
-Handheld device implementations:
-[ 7.1 .5/H-0-1] MUST include support for legacy application compatibility mode as
-implemented by the upstream Android open source code. That is, device implementations
-MUST NOT alter the triggers or thresholds at which compatibility mode is activated, and
-MUST NOT alter the behavior of the compatibility mode itself.
-[ 7.2 .1/H-0-1] MUST include support for third-party Input Method Editor (IME)
-Page 7 of 126
-applications.
-[ 7.2 .3/H-0-3] MUST provide the Home function on all the Android-compatible displays
-that provide the home screen.
-[ 7.2 .3/H-0-4] MUST provide the Back function on all the Android-compatible displays and
-the Recents function on at least one of the Android-compatible displays.
-[ 7.2 .3/H-0-2] MUST send both the normal and long press event of the Back function (
-KEYCODE_BACK ) to the foreground application. These events MUST NOT be consumed
-by the system and CAN be triggered by outside of the Android device (e.g. external
-hardware keyboard connected to the Android device).
-[ 7.2 .4/H-0-1] MUST support touchscreen input.
-[ 7.2 .4/H-SR] Are STRONGLY RECOMMENDED to launch the user-selected assist app, in
-other words the app that implements VoiceInteractionService, or an activity handling the
-ACTION_ASSIST on long-press of KEYCODE_MEDIA_PLAY_PAUSE or
-KEYCODE_HEADSETHOOK if the foreground activity does not handle those long-press
-events.
-[ 7.3 .1/H-SR] Are STRONGLY RECOMMENDED to include a 3-axis accelerometer.
-If Handheld device implementations include a 3-axis accelerometer, they:
-[ 7.3 .1/H-1-1] MUST be able to report events up to a frequency of at least 100 Hz.
-If Handheld device implementations include a GPS/GNSS receiver and report the capability to
-applications through the android.hardware.location.gps feature flag, they:
-[ 7.3 .3/H-2-1] MUST report GNSS measurements, as soon as they are found, even if a
-location calculated from GPS/GNSS is not yet reported.
-[ 7.3 .3/H-2-2] MUST report GNSS pseudoranges and pseudorange rates, that, in open-sky
-conditions after determining the location, while stationary or moving with less than 0.2
-meter per second squared of acceleration, are sufficient to calculate position within 20
-meters, and speed within 0.2 meters per second, at least 95% of the time.
-If Handheld device implementations include a 3-axis gyroscope, they:
-[ 7.3 .4/H-3-1] MUST be able to report events up to a frequency of at least 100 Hz.
-[ 7.3 .4/H-3-2] MUST be capable of measuring orientation changes up to 1000 degrees
-per second.
-Handheld device implementations that can make a voice call and indicate any value other than
-PHONE_TYPE_NONE in getPhoneType :
-[ 7.3 .8/H] SHOULD include a proximity sensor.
-Handheld device implementations:
-[ 7.3 .11/H-SR] Are RECOMMENDED to support pose sensor with 6 degrees of freedom.
-[ 7.4 .3/H] SHOULD include support for Bluetooth and Bluetooth LE.
-If Handheld device implementations include a metered connection, they:
-[ 7.4 .7/H-1-1] MUST provide the data saver mode.
-If Handheld device implementations include a logical camera device that lists capabilities using
-CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA , they:
-[ 7.5 .4/H-1-1] MUST have normal field of view (FOV) by default and it MUST be between
-50 and 90 degrees.
-Handheld device implementations:
-[ 7.6 .1/H-0-1] MUST have at least 4 GB of non-volatile storage available for application
-private data (a.k.a. "/data" partition).
-[ 7.6 .1/H-0-2] MUST return “true” for ActivityManager.isLowRamDevice() when there is less
-than 1GB of memory available to the kernel and userspace.
-If Handheld device implementations declare support of only a 32-bit ABI:
-Page 8 of 126
-[ 7.6 .1/H-1-1] The memory available to the kernel and userspace MUST be at least
-416MB if the default display uses framebuffer resolutions up to qHD (e.g. FWVGA).
-[ 7.6 .1/H-2-1] The memory available to the kernel and userspace MUST be at least
-592MB if the default display uses framebuffer resolutions up to HD+ (e.g. HD, WSVGA).
-[ 7.6 .1/H-3-1] The memory available to the kernel and userspace MUST be at least
-896MB if the default display uses framebuffer resolutions up to FHD (e.g. WSXGA+).
-[ 7.6 .1/H-4-1] The memory available to the kernel and userspace MUST be at least
-1344MB if the default display uses framebuffer resolutions up to QHD (e.g. QWXGA).
-If Handheld device implementations declare support of 32-bit and 64-bit ABIs:
-[ 7.6 .1/H-5-1] The memory available to the kernel and userspace MUST be at least
-816MB if the default display uses framebuffer resolutions up to qHD (e.g. FWVGA).
-[ 7.6 .1/H-6-1] The memory available to the kernel and userspace MUST be at least
-944MB if the default display uses framebuffer resolutions up to HD+ (e.g. HD, WSVGA).
-[ 7.6 .1/H-7-1] The memory available to the kernel and userspace MUST be at least
-1280MB if the default display uses framebuffer resolutions up to FHD (e.g. WSXGA+).
-[ 7.6 .1/H-8-1] The memory available to the kernel and userspace MUST be at least
-1824MB if the default display uses framebuffer resolutions up to QHD (e.g. QWXGA).
-Note that the "memory available to the kernel and userspace" above refers to the memory space
-provided in addition to any memory already dedicated to hardware components such as radio, video,
-and so on that are not under the kernel’s control on device implementations.
-If Handheld device implementations include less than or equal to 1GB of memory available to the
-kernel and userspace, they:
-[ 7.6 .1/H-9-1] MUST declare the feature flag android.hardware.ram.low .
-[ 7.6 .1/H-9-2] MUST have at least 1.1 GB of non-volatile storage for application private
-data (a.k.a. "/data" partition).
-If Handheld device implementations include more than 1GB of memory available to the kernel and
-userspace, they:
-[ 7.6 .1/H-10-1] MUST have at least 4GB of non-volatile storage available for application
-private data (a.k.a. "/data" partition).
-SHOULD declare the feature flag android.hardware.ram.normal .
-Handheld device implementations:
-[ 7.6 .2/H-0-1] MUST NOT provide an application shared storage smaller than 1 GiB.
-[ 7.7 .1/H] SHOULD include a USB port supporting peripheral mode.
-If handheld device implementations include a USB port supporting peripheral mode, they:
-[ 7.7 .1/H-1-1] MUST implement the Android Open Accessory (AOA) API.
-If Handheld device implementations include a USB port supporting host mode, they:
-[ 7.7 .2/H-1-1] MUST implement the USB audio class as documented in the Android SDK
-documentation.
-Handheld device implementations:
-[ 7.8 .1/H-0-1] MUST include a microphone.
-[ 7.8 .2/H-0-1] MUST have an audio output and declare android.hardware.audio.output .
-If Handheld device implementations are capable of meeting all the performance requirements for
-supporting VR mode and include support for it, they:
-[ 7.9 .1/H-1-1] MUST declare the android.hardware.vr.high_performance feature flag.
-[ 7.9 .1/H-1-2] MUST include an application implementing
-android.service.vr.VrListenerService that can be enabled by VR applications via
-android.app.Activity#setVrModeEnabled .
-Page 9 of 126
-If Handheld device implementations include one or more USB-C port(s) in host mode and implement
-(USB audio class), in addition to requirements in section 7.7.2 , they:
-[ 7.8 .2.2/H-1-1] MUST provide the following software mapping of HID codes:
-Function Mappings Context Behavior
-A
-HID usage page : 0x0C
-HID usage : 0x0CD
-Kernel key : KEY_PLAYPAUSE
-Android key :
-KEYCODE_MEDIA_PLAY_PAUSE
-Media
-playback
-Input : Short press
-Output : Play or pause
-Input : Long press
-Output : Launch voice command
-Sends :
-android.speech.action.VOICE_SEARCH_HANDS_FREE if
-the device is locked or its screen is off. Sends
-android.speech.RecognizerIntent.ACTION_WEB_SEARCH
-otherwise
-Incoming
-call
-Input : Short press
-Output : Accept call
-Input : Long press
-Output : Reject call
-Ongoing
-call
-Input : Short press
-Output : End call
-Input : Long press
-Output : Mute or unmute microphone
-B
-HID usage page : 0x0C
-HID usage : 0x0E9
-Kernel key : KEY_VOLUMEUP
-Android key : VOLUME_UP
-Media
-playback,
-Ongoing
-call
-Input : Short or long press
-Output : Increases the system or headset volume
-C
-HID usage page : 0x0C
-HID usage : 0x0EA
-Kernel key :
-KEY_VOLUMEDOWN
-Android key : VOLUME_DOWN
-Media
-playback,
-Ongoing
-call
-Input : Short or long press
-Output : Decreases the system or headset volume
-D
-HID usage page : 0x0C
-HID usage : 0x0CF
-Kernel key :
-KEY_VOICECOMMAND
-Android key :
-KEYCODE_VOICE_ASSIST
-All. Can
-be
-triggered
-in any
-instance.
-Input : Short or long press
-Output : Launch voice command
-[ 7.8 .2.2/H-1-2] MUST trigger ACTION_HEADSET_PLUG upon a plug insert, but only after
-the USB audio interfaces and endpoints have been properly enumerated in order to
-identify the type of terminal connected.
-When the USB audio terminal types 0x0302 is detected, they:
-[ 7.8 .2.2/H-2-1] MUST broadcast Intent ACTION_HEADSET_PLUG with "microphone"
-extra set to 0.
-When the USB audio terminal types 0x0402 is detected, they:
-[ 7.8 .2.2/H-3-1] MUST broadcast Intent ACTION_HEADSET_PLUG with "microphone"
-extra set to 1.
-When API AudioManager.getDevices() is called while the USB peripheral is connected they:
-[ 7.8 .2.2/H-4-1] MUST list a device of type AudioDeviceInfo.TYPE_USB_HEADSET and
-role isSink() if the USB audio terminal type field is 0x0302.
-[ 7.8 .2.2/H-4-2] MUST list a device of type AudioDeviceInfo.TYPE_USB_HEADSET and
-role isSink() if the USB audio terminal type field is 0x0402.
-[ 7.8 .2.2/H-4-3] MUST list a device of type AudioDeviceInfo.TYPE_USB_HEADSET and
-role isSource() if the USB audio terminal type field is 0x0402.
-Page 10 of 126
-[ 7.8 .2.2/H-4-4] MUST list a device of type AudioDeviceInfo.TYPE_USB_DEVICE and role
-isSink() if the USB audio terminal type field is 0x603.
-[ 7.8 .2.2/H-4-5] MUST list a device of type AudioDeviceInfo.TYPE_USB_DEVICE and role
-isSource() if the USB audio terminal type field is 0x604.
-[ 7.8 .2.2/H-4-6] MUST list a device of type AudioDeviceInfo.TYPE_USB_DEVICE and role
-isSink() if the USB audio terminal type field is 0x400.
-[ 7.8 .2.2/H-4-7] MUST list a device of type AudioDeviceInfo.TYPE_USB_DEVICE and role
-isSource() if the USB audio terminal type field is 0x400.
-[ 7.8 .2.2/H-SR] Are STRONGLY RECOMMENDED upon connection of a USB-C audio
-peripheral, to perform enumeration of USB descriptors, identify terminal types and
-broadcast Intent ACTION_HEADSET_PLUG in less than 1000 milliseconds.
 
+Requisitos mínimos del sistema para Android* 4.2 y 4.4 Sistema operativo Android 4.2, Android 4.4.2 o Android 4.4.4 Procesador Procesador Intel Atom® Z2520 de 1,2 GHz o más rápido Almacenamiento Entre 850 MB y 1,2 GB, según la versión de idioma RAM Mínimo de 512 MB, se recomiendan 2 GB.
+
+Las novedades que incluye Android 10:
+
+    Modo oscuro en todo el sistema.
+    Soporte para operar con banda de redes 5G.
+    Introducción de Focus Mode. (Digital Wellbeing se renueva con esta opción, un modo "no molestar" para establecer qué aplicaciones no deben distraer al usuario).
+    Introducción de Live Caption. (Esta opción añadirá subtítulos de manera automática a cualquier tipo de contenido multimedia en vídeo o audio sin necesidad de conexión a Internet).
+    Introducción de una nueva función llamada Bubbles. (Integrada dentro del sistema de notificación, estas bubbles o burbujas, esencialmente, flotan sobre otro contenido en la pantalla, permitiendo al usuario hacer cosas rápida y fácilmente, como por ejemplo, responder a mensajes).
+    Control por intensidad de presión en pantalla. (Permite detectar la intensidad con la que el usuario presiona la pantalla del dispositivo).
+    Compartir la contraseña de una red WiFi a la que esté conectado el dispositivo mediante código QR.
+    Dos modos de rendimiento. (Alto Rendimiento priorizará la velocidad y Baja Latencia priorizará una latencia más baja ideal para videojuegos, y también para llamadas o videollamadas).
+    Selección de colores en el tema.
+    Soporte nativo de reconocimiento facial 3D.
+    Gestión de permisos mejorada.
+    Mayor velocidad y eficiencia en Google Assistant.
+    Modo escritorio. (Permitirá replicar el contenido de la pantalla del teléfono inteligente en un monitor externo mediante interfaz propia).
+    Google incorpora Pixel Themes. (Una aplicación que permite la personalización del aspecto de los iconos del sistema).
+    Grabación en la casa (Android 10 incorpora grabación de audio interna en el dispositivo).
+    Soporte para WiFi 6 y WPA3.
+    Nuevos permisos de acceso en fotos de fondo, video y archivos de audio.
+    Las aplicaciones de fondo ya no pueden saltar al primer plano.
+    Mejore la privacidad: limite el acceso a identificadores de dispositivos no reiniciables.
+    Compartir accesos directos, que permiten compartir contenido con un contacto directamente.
+    Panel de configuración flotante, que permite cambiar la configuración del sistema directamente desde las aplicaciones.
+    Formato de profundidad dinámico para fotos, que permite cambiar el desenfoque del fondo después de tomar una foto.
+    Soporte para TLS 1.3 que ofrece una mayor seguridad y carga las webs seguras hasta un 40% más rápido.
+    Soporte para teléfonos plegables. (Algunas mejoras particulares vienen en la forma de cómo se redimensionan las aplicaciones, agregando soporte para el cambio de aplicaciones en múltiples pantallas).
+    Compatibilidad con el códec de video AV1, el formato de video HDR10 + y el códec de audio Opus.
+    Una API MIDI nativa, que permite la interacción con los controladores de música.
+    Diseños de teléfonos inteligentes plegables para aplicaciones y para el propio Android.
+    Mejoras en Google Play Protect.
+    Mejoras en la seguridad y privacidad del dispositivo.
+    Añadidos nuevos gestos de la barra de navegación
+    Añadida una animación de inicio con tema oscuro en caso de tener esta opción activada
 
 ### Android 11
 
-Handheld device implementations:
-[ 7.1 .1.1/H-0-1] MUST have at least one Android-compatible display that meets all
-requirements described on this document.
-[ 7.1 .1.3/H-SR] Are STRONGLY RECOMMENDED to provide users an affordance to
-change the display size (screen density).
-If Handheld device implementations support software screen rotation, they:
-[ 7.1 .1.1/H-1-1]* MUST make the logical screen that is made available for third party
-applications be at least 2 inches on the short edge(s) and 2.7 inches on the long edge(s).
-Devices which launched on an API level earlier than that of this document are exempted
-from this requirement.
-If Handheld device implementations do not support software screen rotation, they:
-[ 7.1 .1.1/H-2-1]* MUST make the logical screen that is made available for third party
-applications be at least 2.7 inches on the short edge(s). Devices which launched on an
-API level earlier than that of this document are exempted from this requirement.
-If Handheld device implementations claim support for high dynamic range displays through
-Page 8 of 136
-Configuration.isScreenHdr() , they:
-[ 7.1 .4.5/H-1-1] MUST advertise support for the EGL_EXT_gl_colorspace_bt2020_pq ,
-EGL_EXT_surface_SMPTE2086_metadata , EGL_EXT_surface_CTA861_3_metadata ,
-VK_EXT_swapchain_colorspace , and VK_EXT_hdr_metadata extensions.
-Handheld device implementations:
-[ 7.1 .4.6/H-0-1] MUST report whether the device supports the GPU profiling capability via
-a system property graphics.gpu.profiler.support .
-If Handheld device implementations declare support via a system property graphics.gpu.profiler.support
-, they:
-[ 7.1 .4.6/H-1-1] MUST report as output a protobuf trace that complies with the schema
-for GPU counters and GPU renderstages defined in the Perfetto documentation .
-[ 7.1 .4.6/H-1-2] MUST report conformant values for the device’s GPU counters following
-the gpu counter trace packet proto .
-[ 7.1 .4.6/H-1-3] MUST report conformant values for the device’s GPU RenderStages
-following the render stage trace packet proto .
-[ 7.1 .4.6/H-1-4] MUST report a GPU Frequency tracepoint as specified by the format:
-power/gpu_frequency .
-Handheld device implementations:
-[ 7.1 .5/H-0-1] MUST include support for legacy application compatibility mode as
-implemented by the upstream Android open source code. That is, device implementations
-MUST NOT alter the triggers or thresholds at which compatibility mode is activated, and
-MUST NOT alter the behavior of the compatibility mode itself.
-[ 7.2 .1/H-0-1] MUST include support for third-party Input Method Editor (IME)
-applications.
-[ 7.2 .3/H-0-3] MUST provide the Home function on all the Android-compatible displays
-that provide the home screen.
-[ 7.2 .3/H-0-4] MUST provide the Back function on all the Android-compatible displays and
-the Recents function on at least one of the Android-compatible displays.
-[ 7.2 .3/H-0-2] MUST send both the normal and long press event of the Back function (
-KEYCODE_BACK ) to the foreground application. These events MUST NOT be consumed
-by the system and CAN be triggered by outside of the Android device (e.g. external
-hardware keyboard connected to the Android device).
-[ 7.2 .4/H-0-1] MUST support touchscreen input.
-[ 7.2 .4/H-SR] Are STRONGLY RECOMMENDED to launch the user-selected assist app, in
-other words the app that implements VoiceInteractionService, or an activity handling the
-ACTION_ASSIST on long-press of KEYCODE_MEDIA_PLAY_PAUSE or
-KEYCODE_HEADSETHOOK if the foreground activity does not handle those long-press
-events.
-[ 7.3 .1/H-SR] Are STRONGLY RECOMMENDED to include a 3-axis accelerometer.
-If Handheld device implementations include a 3-axis accelerometer, they:
-[ 7.3 .1/H-1-1] MUST be able to report events up to a frequency of at least 100 Hz.
-If Handheld device implementations include a GPS/GNSS receiver and report the capability to
-applications through the android.hardware.location.gps feature flag, they:
-[ 7.3 .3/H-2-1] MUST report GNSS measurements, as soon as they are found, even if a
-location calculated from GPS/GNSS is not yet reported.
-[ 7.3 .3/H-2-2] MUST report GNSS pseudoranges and pseudorange rates, that, in open-sky
-conditions after determining the location, while stationary or moving with less than 0.2
-meter per second squared of acceleration, are sufficient to calculate position within 20
-meters, and speed within 0.2 meters per second, at least 95% of the time.
-If Handheld device implementations include a 3-axis gyroscope, they:
-[ 7.3 .4/H-3-1] MUST be able to report events up to a frequency of at least 100 Hz.
-[ 7.3 .4/H-3-2] MUST be capable of measuring orientation changes up to 1000 degrees
-per second.
-Page 9 of 136
-Handheld device implementations that can make a voice call and indicate any value other than
-PHONE_TYPE_NONE in getPhoneType :
-[ 7.3 .8/H] SHOULD include a proximity sensor.
-Handheld device implementations:
-[ 7.3 .11/H-SR] Are RECOMMENDED to support pose sensor with 6 degrees of freedom.
-[ 7.4 .3/H] SHOULD include support for Bluetooth and Bluetooth LE.
-If Handheld device implementations include a metered connection, they:
-[ 7.4 .7/H-1-1] MUST provide the data saver mode.
-If Handheld device implementations include a logical camera device that lists capabilities using
-CameraMetadata.REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA , they:
-[ 7.5 .4/H-1-1] MUST have normal field of view (FOV) by default and it MUST be between
-50 and 90 degrees.
-Handheld device implementations:
-[ 7.6 .1/H-0-1] MUST have at least 4 GB of non-volatile storage available for application
-private data (a.k.a. "/data" partition).
-[ 7.6 .1/H-0-2] MUST return “true” for ActivityManager.isLowRamDevice() when there is less
-than 1GB of memory available to the kernel and userspace.
-If Handheld device implementations declare support of only a 32-bit ABI:
-[ 7.6 .1/H-1-1] The memory available to the kernel and userspace MUST be at least
-416MB if the default display uses framebuffer resolutions up to qHD (e.g. FWVGA).
-[ 7.6 .1/H-2-1] The memory available to the kernel and userspace MUST be at least
-592MB if the default display uses framebuffer resolutions up to HD+ (e.g. HD, WSVGA).
-[ 7.6 .1/H-3-1] The memory available to the kernel and userspace MUST be at least
-896MB if the default display uses framebuffer resolutions up to FHD (e.g. WSXGA+).
-[ 7.6 .1/H-4-1] The memory available to the kernel and userspace MUST be at least
-1344MB if the default display uses framebuffer resolutions up to QHD (e.g. QWXGA).
-If Handheld device implementations declare support of 32-bit and 64-bit ABIs:
-[ 7.6 .1/H-5-1] The memory available to the kernel and userspace MUST be at least
-816MB if the default display uses framebuffer resolutions up to qHD (e.g. FWVGA).
-[ 7.6 .1/H-6-1] The memory available to the kernel and userspace MUST be at least
-944MB if the default display uses framebuffer resolutions up to HD+ (e.g. HD, WSVGA).
-[ 7.6 .1/H-7-1] The memory available to the kernel and userspace MUST be at least
-1280MB if the default display uses framebuffer resolutions up to FHD (e.g. WSXGA+).
-[ 7.6 .1/H-8-1] The memory available to the kernel and userspace MUST be at least
-1824MB if the default display uses framebuffer resolutions up to QHD (e.g. QWXGA).
-Note that the "memory available to the kernel and userspace" above refers to the memory space
-provided in addition to any memory already dedicated to hardware components such as radio, video,
-and so on that are not under the kernel’s control on device implementations.
-If Handheld device implementations include less than or equal to 1GB of memory available to the
-kernel and userspace, they:
-[ 7.6 .1/H-9-1] MUST declare the feature flag android.hardware.ram.low .
-[ 7.6 .1/H-9-2] MUST have at least 1.1 GB of non-volatile storage for application private
-data (a.k.a. "/data" partition).
-If Handheld device implementations include more than 1GB of memory available to the kernel and
-userspace, they:
-[ 7.6 .1/H-10-1] MUST have at least 4GB of non-volatile storage available for application
-private data (a.k.a. "/data" partition).
-Page 10 of 136
-SHOULD declare the feature flag android.hardware.ram.normal .
-Handheld device implementations:
-[ 7.6 .2/H-0-1] MUST NOT provide an application shared storage smaller than 1 GiB.
-[ 7.7 .1/H] SHOULD include a USB port supporting peripheral mode.
-If handheld device implementations include a USB port supporting peripheral mode, they:
-[ 7.7 .1/H-1-1] MUST implement the Android Open Accessory (AOA) API.
-If Handheld device implementations include a USB port supporting host mode, they:
-[ 7.7 .2/H-1-1] MUST implement the USB audio class as documented in the Android SDK
-documentation.
-Handheld device implementations:
-[ 7.8 .1/H-0-1] MUST include a microphone.
-[ 7.8 .2/H-0-1] MUST have an audio output and declare android.hardware.audio.output .
-If Handheld device implementations are capable of meeting all the performance requirements for
-supporting VR mode and include support for it, they:
-[ 7.9 .1/H-1-1] MUST declare the android.hardware.vr.high_performance feature flag.
-[ 7.9 .1/H-1-2] MUST include an application implementing
-android.service.vr.VrListenerService that can be enabled by VR applications via
-android.app.Activity#setVrModeEnabled .
-If Handheld device implementations include one or more USB-C port(s) in host mode and implement
-(USB audio class), in addition to requirements in section 7.7.2 , they:
-[ 7.8 .2.2/H-1-1] MUST provide the following software mapping of HID codes:
-Function Mappings Context Behavior
-A
-HID usage page : 0x0C
-HID usage : 0x0CD
-Kernel key : KEY_PLAYPAUSE
-Android key :
-KEYCODE_MEDIA_PLAY_PAUSE
-Media
-playback
-Input : Short press
-Output : Play or pause
-Input : Long press
-Output : Launch voice command
-Sends :
-android.speech.action.VOICE_SEARCH_HANDS_FREE if
-the device is locked or its screen is off. Sends
-android.speech.RecognizerIntent.ACTION_WEB_SEARCH
-otherwise
-Incoming
-call
-Input : Short press
-Output : Accept call
-Input : Long press
-Output : Reject call
-Ongoing
-call
-Input : Short press
-Output : End call
-Input : Long press
-Output : Mute or unmute microphone
-B
-HID usage page : 0x0C
-HID usage : 0x0E9
-Kernel key : KEY_VOLUMEUP
-Android key : VOLUME_UP
-Media
-playback,
-Ongoing
-call
-Input : Short or long press
-Output : Increases the system or headset volume
-C
-HID usage page : 0x0C
-HID usage : 0x0EA
-Kernel key :
-KEY_VOLUMEDOWN
-Android key : VOLUME_DOWN
-Media
-playback,
-Ongoing
-call
-Input : Short or long press
-Output : Decreases the system or headset volume
-Page 11 of 136
-D
-HID usage page : 0x0C
-HID usage : 0x0CF
-Kernel key :
-KEY_VOICECOMMAND
-Android key :
-KEYCODE_VOICE_ASSIST
-All. Can
-be
-triggered
-in any
-instance.
-Input : Short or long press
-Output : Launch voice command
-[ 7.8 .2.2/H-1-2] MUST trigger ACTION_HEADSET_PLUG upon a plug insert, but only after
-the USB audio interfaces and endpoints have been properly enumerated in order to
-identify the type of terminal connected.
-When the USB audio terminal types 0x0302 is detected, they:
-[ 7.8 .2.2/H-2-1] MUST broadcast Intent ACTION_HEADSET_PLUG with "microphone"
-extra set to 0.
-When the USB audio terminal types 0x0402 is detected, they:
-[ 7.8 .2.2/H-3-1] MUST broadcast Intent ACTION_HEADSET_PLUG with "microphone"
-extra set to 1.
-When API AudioManager.getDevices() is called while the USB peripheral is connected they:
-[ 7.8 .2.2/H-4-1] MUST list a device of type AudioDeviceInfo.TYPE_USB_HEADSET and
-role isSink() if the USB audio terminal type field is 0x0302.
-[ 7.8 .2.2/H-4-2] MUST list a device of type AudioDeviceInfo.TYPE_USB_HEADSET and
-role isSink() if the USB audio terminal type field is 0x0402.
-[ 7.8 .2.2/H-4-3] MUST list a device of type AudioDeviceInfo.TYPE_USB_HEADSET and
-role isSource() if the USB audio terminal type field is 0x0402.
-[ 7.8 .2.2/H-4-4] MUST list a device of type AudioDeviceInfo.TYPE_USB_DEVICE and role
-isSink() if the USB audio terminal type field is 0x603.
-[ 7.8 .2.2/H-4-5] MUST list a device of type AudioDeviceInfo.TYPE_USB_DEVICE and role
-isSource() if the USB audio terminal type field is 0x604.
-[ 7.8 .2.2/H-4-6] MUST list a device of type AudioDeviceInfo.TYPE_USB_DEVICE and role
-isSink() if the USB audio terminal type field is 0x400.
-[ 7.8 .2.2/H-4-7] MUST list a device of type AudioDeviceInfo.TYPE_USB_DEVICE and role
-isSource() if the USB audio terminal type field is 0x400.
-[ 7.8 .2.2/H-SR] Are STRONGLY RECOMMENDED upon connection of a USB-C audio
-peripheral, to perform enumeration of USB descriptors, identify terminal types and
-broadcast Intent ACTION_HEADSET_PLUG in less than 1000 milliseconds.
-If Handheld device implementations include at least one haptic actuator, they:
-[ 7.10 /H-SR]* Are STRONGLY RECOMMENDED NOT to use an eccentric rotating mass
-(ERM) haptic actuator(vibrator).
-[ 7.10 /H]* SHOULD position the placement of the actuator near the location where the
-device is typically held or touched by hands.
-[ 7.10 /H-SR]* Are STRONGLY RECOMMENDED to implement all public constants for clear
-haptics in android.view.HapticFeedbackConstants namely (CLOCK_TICK,
-CONTEXT_CLICK, KEYBOARD_PRESS, KEYBOARD_RELEASE, KEYBOARD_TAP,
-LONG_PRESS, TEXT_HANDLE_MOVE, VIRTUAL_KEY, VIRTUAL_KEY_RELEASE, CONFIRM,
-REJECT, GESTURE_START and GESTURE_END).
-[ 7.10 /H-SR]* Are STRONGLY RECOMMENDED to implement all public constants for clear
-haptics in android.os.VibrationEffect namely (EFFECT_TICK, EFFECT_CLICK,
-EFFECT_HEAVY_CLICK and EFFECT_DOUBLE_CLICK) and all public constants for rich
-haptics in android.os.VibrationEffect.Composition namely (PRIMITIVE_CLICK and
-PRIMITIVE_TICK).
-[ 7.10 /H-SR]* Are STRONGLY RECOMMENDED to use these linked haptic constants
-mappings .
-[ 7.10 /H-SR]* Are STRONGLY RECOMMENDED to follow quality assessment for
-createOneShot() and createWaveform() API's.
-[ 7.10 /H-SR]* Are STRONGLY RECOMMENDED to verify the capabilities for amplitude
-scalability by running android.os.Vibrator.hasAmplitudeControl() .
-Page 12 of 136
-Linear resonant actuator (LRA) is a single mass spring system which has a dominant resonant
-frequency where the mass translates in the direction of desired motion.
-If Handheld device implementations include at least one linear resonant actuator, they:
-[ 7.10 /H]* SHOULD move the haptic actuator in the X-axis of portrait orientation.
-If Handheld device implementations have a haptic actuator which is X-axis Linear resonant actuator
-(LRA), they:
-[ 7.10 /H-SR]* Are STRONGLY RECOMMENDED to have the resonant frequency of the X-
-axis LRA be under 200 Hz.
-If handheld device implementations follow haptic constants mapping, they:
-[ 7.10 /H-SR]* Are STRONGLY RECOMMENDED to perform a quality assessment for haptic
-constants.
+Las nuevas características de la plataforma incluidas en Android 11 DP1 incluyen mejoras para admitir teléfonos inteligentes plegables, 5G, Project Mainline (servicio de componentes del sistema a través de Google Play Store) y HEIF. También se incluirá soporte para la autenticación de llamadas STIR/SHAKEN. Google también declaró planes para una "sección de conversación dedicada en el campo de notificaciones", la capacidad de otorgar solo ciertos permisos a las aplicaciones caso por caso (de manera similar a iOS 13 y One UI de Samsung) e introducir una aplicación más estricta del "almacenamiento con alcance" sistema.6​
 
+    Burbujas flotantes para notificaciones. (Los avisos serán más visuales e intuitivos para el usuario, de tal manera que se podrá acceder a ellos de forma más sencilla).
+    Introducción de la función Nearby Sharing, anteriormente conocida como Fast Sharing. (Será posible enviar todo tipo de contenido entre dispositivos sin utilizar conexión a Internet, igual que la tecnología AirDrop en dispositivos Apple).
+    Acceso al reproductor de música a través de los ajustes rápidos.
+    El modo oscuro agrega una nueva opción por la que será posible activarlo o desactivarlo según la hora del día.
+    El modo Bluetooth permanecerá encendido cuando se active el modo avión. (Esto facilitará que los usuarios puedan conectar rápidamente auriculares inalámbricos u otros dispositivos Bluetooth durante el vuelo).
+    Nuevos emojis.
+    Rediseño de iconos de la interfaz.
+    Nuevo menú de apagado. (Será posible escoger qué opciones deben aparecer en el menú).
+    Se mostrarán sugerencias de aplicaciones en la interfaz, las cuales serán seleccionadas por Android dependiendo de las rutinas y gustos personales del usuario.
+    Integración de nuevo centro de control de electrodomésticos conectados. (Se podrá controlar cualquier aparato electrónico conectado a la red de casa desde un acceso directo de la nueva interfaz).
+    Mejoras de conectividad y experiencia en el uso de redes 5G.
+    Soporte para ángulo de pantalla en móviles plegables.
+    API de detección de llamadas spam.
+    Soporte nativo de grabación de pantalla.
+    Se agrega la opción para aumentar la sensibilidad táctil del dispositivo en el menú de configuración. (Será útil para los usuarios que utilizan protectores de pantalla en los dispositivos móviles).
+    Modo PiP ajustable. (Esta nueva herramienta consiste en poder ajustar el tamaño de los vídeos que se reproducen en el fondo de aplicaciones como Facebook, Twitter, Instagram o WhatsApp, de tal manera que se podrá disfrutar de contenido multimedia con una mejor resolución mientras se navega en otras páginas o apps).
+    Mejoras para cámaras, incluyendo un soporte nativo para fotos con formato HEIF de alta eficiencia.
+    Se podrá silenciar notificaciones de algunas apps que suelen ocupar espacio en la pantalla y no se pueden eliminar.
+    Mejoras en el Asistente de Google con la voz. (El sistema podrá leer lo que se muestra en pantalla sin etiquetar apps o acciones, por lo que bastará que el usuario mencione en voz alta una app o la acción para que el sistema responda a sus acciones).
+    Conexión inalámbrica para Android Auto.
+    Mejoras en la privacidad y seguridad del dispositivo.
 
+Thanks to the recently launched beta-tests of the Android 11 mobile operating system - more specifically the Device Configuration Guide provided by Google - we have learned the hardware requirements of this software (via XDA Developers). It turns out that in order to work smoothly and offer a full set of functions, the system needs a phone with more than 2 GB of RAM.
+
+Models with 2 GB or less of RAM will be recognized as an Android Go device - we will only be able to run on them a special, "light" version of the system, characterized by reduced functionality. It is worth noting that in the case of devices with 512 MB or less operating memory we will not install Android 11 at all.
