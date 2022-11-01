@@ -18,5 +18,20 @@ public class PersonaPrueba {
         
         // Tarea Crear otro objeto de tipo Persona, asignar valores de manera inicial
         // y imprimir, luego modificar sis valores y volver a imprimir
+        Persona persona2 = new Persona("Agustin", 10000, false);
+        
+        System.out.println("persona2 - nombre: "+persona2.getNombre());
+        System.out.println("persona2 - sueldo: "+persona2.getSueldo());
+        System.out.println("persona2 - eliminado?: "+persona2.isEliminado());
+        
+        persona2.setNombre("Francisco");
+        persona2.setSueldo(15000);
+        persona2.setEliminado(true);
+        
+        System.out.println("persona2 - nombre: "+persona2.getNombre());
+        System.out.println("persona2 - sueldo: "+persona2.getSueldo());
+        System.out.println("persona2 - eliminado?: "+persona2.isEliminado());
+        
+        
     }
 }
