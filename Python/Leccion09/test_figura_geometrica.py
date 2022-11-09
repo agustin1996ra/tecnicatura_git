@@ -14,5 +14,5 @@ print(cuadrado1)
 rectangulo1 = Rectangulo(4, 3, "Rojo")
 print(rectangulo1)
 
-rec = Rectangulo2(4,3,"Amarillo")
-print(rec)
+rectangulo2 = Rectangulo(4, 3, "Amarillo")
+print(rectangulo2)

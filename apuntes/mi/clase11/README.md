@@ -105,3 +105,9 @@ INSERT INTO estudiantes (nombre, apellido, edad) VALUES ("julieta", "ramirez", 1
 select * from dato.estudiantes;
 ```
 Para que me permita ingresar datos debemos ingresar nuevamente a la configuración de la tabla y seleccionar en la fila id estudiante en la opción AI (auto incrementable) y aplicamos los cambios.
+
+# Actividad:
+1. Responder el cuestionario para la asistencia en el campus
+2. Realizar la siguiente actividad:
+    1. Ingresar datos en la tabla creada la clase anterior.
+    2. Utilizar los operadores para selección y proyección
