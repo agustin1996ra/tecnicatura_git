@@ -1,4 +1,4 @@
-//Creacion de array
+//Creación de array
 // let autos = new Array('Ferrari','Renault','Bmw'); // esta es la sintaxis vieja
 
 const autos = ['Ferrari','Renault','Bmw']; // esta es la sintaxis que se utiliza actualmente
@@ -24,7 +24,7 @@ console.log(autos.length);
 autos[autos.length] = 'Porche';
 console.log(autos);
 
-//Tersera forma de agregar
+//Tercera forma de agregar
 // hay que tener cuidado con esta forma por que agrega espacios en blanco
 // y genera mucho espacio de memoria
 autos[3] = 'chevrolet';
@@ -36,6 +36,3 @@ console.log(autos);
 console.log(Array.isArray(autos)); //booleano
 //segunda
 console.log(autos instanceof Array); //booleano
-
-
-
